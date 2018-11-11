@@ -15,6 +15,4 @@ function WeddingMap(props) {
   );
 }
 
-export default GoogleApiWrapper({
-  apiKey: "AIzaSyB_BWkESP6a0Xbqyw0NL_06uCuXvnCmU2o"
-})(WeddingMap);
+export default GoogleApiWrapper({})(WeddingMap);
