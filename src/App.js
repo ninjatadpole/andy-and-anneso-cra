@@ -1,26 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
+import DocumentTitle from "react-document-title";
+
+import Nav from "./components/nav";
+import PageHome from "./components/page-home";
+import PageMap from "./components/page-map";
+import PageTimeline from "./components/page-timeline";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <DocumentTitle title="Andy & Anne-So - August 24th 2019">
+        <div className="App">
+          <Nav />
+          <Switch>
+            <Route exact path="/" component={PageHome} />
+            <Route path="/:lang(\w\w)?/map" component={PageMap} />
+            <Route path="/:lang(\w\w)?/timeline" component={PageTimeline} />
+            <Route component={PageHome} />
+          </Switch>
+        </div>
+      </DocumentTitle>
     );
   }
 }
