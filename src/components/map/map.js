@@ -15,4 +15,6 @@ function WeddingMap(props) {
   );
 }
 
-export default GoogleApiWrapper({})(WeddingMap);
+export default GoogleApiWrapper({
+  apiKey: process.env.REACT_APP_GOOGLE_MAPS
+})(WeddingMap);
