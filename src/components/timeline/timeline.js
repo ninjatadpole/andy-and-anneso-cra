@@ -31,95 +31,95 @@ function Timeline(props) {
   return (
     <VerticalTimeline>
       <VerticalTimelineElement
-        className="vertical-timeline-element--work"
-        date="2011 - present"
+        date="11:30"
+        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+        icon={<WorkIcon />}
+        position="left"
+      >
+        <h3>Guests arrive</h3>
+        <h4>Islington Town Hall, Islington</h4>
+        <p>Family and full-day guests are requested to arrive in good time.</p>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        date="12:00"
         iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
         icon={<WorkIcon />}
       >
-        <h3 className="vertical-timeline-element-title">Creative Director</h3>
-        <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
+        <h3>Ceremony</h3>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        date="12:50"
+        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+        icon={<WorkIcon />}
+      >
+        <h3>Blessing</h3>
+        <h4>Islington public gardens</h4>
+        <p>The gardens are a short (5 minute) walk from the ceremony</p>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        date="13:00"
+        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+        icon={<WorkIcon />}
+      >
+        <h3>Photographs</h3>
+        <p>Refreshments will be provided</p>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        date="13:30"
+        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+        icon={<SchoolIcon />}
+      >
+        <h3>Transport to reception</h3>
         <p>
-          Creative Direction, User Experience, Visual Design, Project
-          Management, Team Leading
+          All guests will be provided with traditional journeys to the
+          reception.
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
-        className="vertical-timeline-element--work"
-        date="2010 - 2011"
+        date="14:00"
         iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-        icon={<WorkIcon />}
+        icon={<SchoolIcon />}
       >
-        <h3 className="vertical-timeline-element-title">Art Director</h3>
-        <h4 className="vertical-timeline-element-subtitle">
-          San Francisco, CA
-        </h4>
+        <h3>Vin d'honneur</h3>
+        <h4>The Depot, Caledonian Road</h4>
+        <p>Cannapés and bubbles and greetings</p>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        date="15:00"
+        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+        icon={<SchoolIcon />}
+      >
+        <h3>Lunch</h3>
         <p>
-          Creative Direction, User Experience, Visual Design, SEO, Online
-          Marketing
+          We will contact our full-day guests for menu preferences before the
+          day
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
-        className="vertical-timeline-element--work"
-        date="2008 - 2010"
-        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-        icon={<WorkIcon />}
-      >
-        <h3 className="vertical-timeline-element-title">Web Designer</h3>
-        <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
-        <p>User Experience, Visual Design</p>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        className="vertical-timeline-element--work"
-        date="2006 - 2008"
-        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-        icon={<WorkIcon />}
-      >
-        <h3 className="vertical-timeline-element-title">Web Designer</h3>
-        <h4 className="vertical-timeline-element-subtitle">
-          San Francisco, CA
-        </h4>
-        <p>User Experience, Visual Design</p>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        className="vertical-timeline-element--education"
-        date="April 2013"
+        date="19:00"
         iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
         icon={<SchoolIcon />}
       >
-        <h3 className="vertical-timeline-element-title">
-          Content Marketing for Web, Mobile and Social Media
-        </h3>
-        <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
-        <p>Strategy, Social Media</p>
+        <h3>Party</h3>
+        <h4>The Depot, Caledonian Road</h4>
+        <p>
+          All guests are invited to join for music and games and celebration
+        </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
-        className="vertical-timeline-element--education"
-        date="November 2012"
+        date="21:00"
         iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
         icon={<SchoolIcon />}
       >
-        <h3 className="vertical-timeline-element-title">
-          Agile Development Scrum Master
-        </h3>
-        <h4 className="vertical-timeline-element-subtitle">Certification</h4>
-        <p>Creative Direction, User Experience, Visual Design</p>
+        <h3>Evening buffet</h3>
       </VerticalTimelineElement>
       <VerticalTimelineElement
-        className="vertical-timeline-element--education"
-        date="2002 - 2006"
+        date="02:00"
         iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
         icon={<SchoolIcon />}
       >
-        <h3 className="vertical-timeline-element-title">
-          Bachelor of Science in Interactive Digital Media Visual Imaging
-        </h3>
-        <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
-        <p>Creative Direction, Visual Design</p>
+        <h3>(Hackney) Carriages</h3>
       </VerticalTimelineElement>
-      <VerticalTimelineElement
-        iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
-        icon={<StarIcon />}
-      />
     </VerticalTimeline>
   );
 }
