@@ -7,11 +7,13 @@ import PageHome from "./components/page-home";
 import PageMap from "./components/page-map";
 import PageTimeline from "./components/page-timeline";
 
+import "./app.scss";
+
 class App extends Component {
   render() {
     return (
       <DocumentTitle title="Andy & Anne-So - August 24th 2019">
-        <div className="App">
+        <div className="app">
           <Nav />
           <Switch>
             <Route exact path="/" component={PageHome} />

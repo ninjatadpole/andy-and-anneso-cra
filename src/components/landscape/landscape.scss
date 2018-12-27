@@ -1,0 +1,63 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/classes.scss";
+
+.landscape {
+  @extend %max-width;
+
+  height: 150px;
+  position: relative;
+  width: 100%;
+
+  .mountain {
+    @include image-ratio("../../static/images/mountain.png", 48%);
+
+    bottom: 0;
+    right: 10%;
+    position: absolute;
+    width: 20%;
+  }
+
+  .trees {
+    bottom: 0;
+    height: 150px;
+    left: 10%;
+    position: absolute;
+    width: 20%;
+
+    .tree-1 {
+      @include image-ratio("../../static/images/tree-1.png", 230%);
+
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      width: 50%;
+    }
+
+    .tree-2 {
+      @include image-ratio("../../static/images/tree-2.png", 200%);
+
+      bottom: 0;
+      left: auto;
+      position: absolute;
+      right: 0;
+      width: 50%;
+    }
+  }
+
+  .home-copy.fr & {
+    .mirror {
+      transform: scaleX(-1);
+      filter: FlipH;
+    }
+
+    .mountain {
+      left: 10%;
+      right: auto;
+    }
+
+    .trees {
+      left: auto;
+      right: 10%;
+    }
+  }
+}

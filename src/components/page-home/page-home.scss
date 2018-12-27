@@ -1,9 +1,20 @@
 @import "../../styles/colours";
 
-.page {
-  color: $red;
-}
-
 .home {
   font-weight: bold;
+  text-align: center;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    transition: transform ease-in-out 660ms;
+
+    .fr {
+      transform: rotate(180deg);
+    }
+  }
+
+  &.fr article {
+    transform: rotate(180deg);
+  }
 }

@@ -1,0 +1,21 @@
+@mixin image-ratio($url, $height) {
+  &::before {
+    content: "";
+    display: block;
+    height: 0;
+    padding-top: $height;
+    position: relative;
+  }
+
+  &::after {
+    background: url($url) center no-repeat;
+    background-size: contain;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}

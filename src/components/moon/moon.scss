@@ -1,0 +1,18 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/classes.scss";
+
+.moon-container {
+  @extend %max-width;
+
+  width: 100%;
+
+  .moon {
+    @include image-ratio("../../static/images/moon.png", 100%);
+
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+  }
+}
