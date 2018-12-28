@@ -1,6 +1,8 @@
 @import "../../styles/mixins.scss";
 
 .home-copy {
+  position: relative;
+
   .line-1 {
     display: block;
     font-size: 20px;

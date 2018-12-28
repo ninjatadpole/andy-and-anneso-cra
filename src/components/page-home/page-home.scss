@@ -9,12 +9,26 @@
     flex-direction: column;
     transition: transform ease-in-out 660ms;
 
+    .fr,
+    .en {
+      transition: filter 0ms 330ms;
+    }
+
     .fr {
+      filter: blur(1px);
       transform: rotate(180deg);
     }
   }
 
   &.fr article {
     transform: rotate(180deg);
+
+    .en {
+      filter: blur(1px);
+    }
+
+    .fr {
+      filter: blur(0);
+    }
   }
 }

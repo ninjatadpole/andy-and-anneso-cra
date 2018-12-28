@@ -38,7 +38,9 @@ class PageHome extends React.Component {
               line3="to celebrate their wedding"
               line4="Noon on the 24th August 2019"
             >
-              <Landscape />
+              <Landscape>
+                <div className="stag" />
+              </Landscape>
             </HomeCopy>
 
             <Horizon>
@@ -51,7 +53,9 @@ class PageHome extends React.Component {
               line3="pour leur mariage"
               line4="le 24 Août 2019 à midi"
             >
-              <Landscape />
+              <Landscape>
+                <div className="fox mirror" />
+              </Landscape>
             </HomeCopy>
           </article>
         </section>

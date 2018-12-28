@@ -8,6 +8,24 @@
   position: relative;
   width: 100%;
 
+  .stag {
+    @include image-ratio("../../static/images/stag.png", 85%);
+
+    bottom: -4px;
+    left: 25%;
+    position: absolute;
+    width: 9%;
+  }
+
+  .fox {
+    @include image-ratio("../../static/images/fox.png", 84%);
+
+    bottom: -4px;
+    left: 31%;
+    position: absolute;
+    width: 4.5%;
+  }
+
   .mountain {
     @include image-ratio("../../static/images/mountain.png", 48%);
 
