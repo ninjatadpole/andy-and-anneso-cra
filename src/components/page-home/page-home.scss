@@ -20,15 +20,17 @@
     }
   }
 
-  &.fr article {
-    transform: rotate(180deg);
+  .fr & {
+    article {
+      transform: rotate(180deg);
 
-    .en {
-      filter: blur(1px);
-    }
+      .en {
+        filter: blur(1px);
+      }
 
-    .fr {
-      filter: blur(0);
+      .fr {
+        filter: blur(0);
+      }
     }
   }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import DocumentTitle from "react-document-title";
-import classnames from "classnames";
+
+import { ContextConsumer } from "../../context";
 
 import HomeCopy from "../home-copy";
 import Horizon from "../horizon";
@@ -9,59 +10,64 @@ import Moon from "../moon";
 
 import "./page-home.scss";
 
-class PageHome extends React.Component {
-  state = {
-    language: 0
-  };
+function PageHome(props) {
+  return (
+    <DocumentTitle title={props.translate("siteTitle")}>
+      <section className="page home">
+        <div className="language-switcher">
+          <button
+            className="en"
+            disabled={props.language === "en"}
+            onClick={props.swapLanguage}
+          >
+            EN
+          </button>
+          <button
+            className="fr"
+            disabled={props.language === "fr"}
+            onClick={props.swapLanguage}
+          >
+            FR
+          </button>
+        </div>
 
-  languages = ["en", "fr"];
+        <article>
+          <HomeCopy
+            language="en"
+            line1={props.translate("homeLine1", "en")}
+            line2={props.translate("homeLine2", "en")}
+            line3={props.translate("homeLine3", "en")}
+            line4={props.translate("homeLine4", "en")}
+          >
+            <Landscape>
+              <div className="stag" />
+            </Landscape>
+          </HomeCopy>
 
-  swap = () => {
-    this.setState({ language: (this.state.language + 1) % 2 });
-  };
+          <Horizon>
+            <Moon />
+          </Horizon>
+          <HomeCopy
+            language="fr"
+            line1={props.translate("homeLine1", "fr")}
+            line2={props.translate("homeLine2", "fr")}
+            line3={props.translate("homeLine3", "fr")}
+            line4={props.translate("homeLine4", "fr")}
+          >
+            <Landscape>
+              <div className="fox mirror" />
+            </Landscape>
+          </HomeCopy>
+        </article>
+      </section>
+    </DocumentTitle>
+  );
+}
 
+class PageHomeController extends React.Component {
   render() {
-    return (
-      <DocumentTitle title="Andy & Anne-So - August 24th 2019">
-        <section
-          className={classnames(
-            "page home",
-            this.languages[this.state.language]
-          )}
-        >
-          <button onClick={this.swap}>Swap</button>
-          <article>
-            <HomeCopy
-              language="en"
-              line1="Come and join"
-              line2="Andy & Anne-So"
-              line3="to celebrate their wedding"
-              line4="Noon on the 24th August 2019"
-            >
-              <Landscape>
-                <div className="stag" />
-              </Landscape>
-            </HomeCopy>
-
-            <Horizon>
-              <Moon />
-            </Horizon>
-            <HomeCopy
-              language="fr"
-              line1="Venez rejoindre"
-              line2="Anne-So & Andy"
-              line3="pour leur mariage"
-              line4="le 24 Août 2019 à midi"
-            >
-              <Landscape>
-                <div className="fox mirror" />
-              </Landscape>
-            </HomeCopy>
-          </article>
-        </section>
-      </DocumentTitle>
-    );
+    return <ContextConsumer>{ctxt => <PageHome {...ctxt} />}</ContextConsumer>;
   }
 }
 
-export default PageHome;
+export default PageHomeController;
