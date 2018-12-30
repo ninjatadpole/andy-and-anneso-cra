@@ -35,8 +35,12 @@ body {
 
 a {
   color: $black;
+  outline: none;
 }
 
-%max-width {
-  max-width: 1024px;
+button {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
 }

@@ -17,24 +17,9 @@ function PageHome(props) {
   } = props;
 
   return (
-    <DocumentTitle title={props.translate("siteTitle")}>
+    <DocumentTitle title={translate("siteTitle")}>
       <section className="page home">
-        <div className="language-switcher">
-          <button
-            className="en"
-            disabled={props.language === "en"}
-            onClick={props.swapLanguage}
-          >
-            EN
-          </button>
-          <button
-            className="fr"
-            disabled={props.language === "fr"}
-            onClick={props.swapLanguage}
-          >
-            FR
-          </button>
-        </div>
+        <LanguageSwitcher />
 
         <article>
           <HomeCopy language="en">
