@@ -2,24 +2,28 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
+import { WithCtx } from "../../context";
+
 import "./home-copy.scss";
 
 function HomeCopy(props) {
   const {
     language,
-    line1,
-    line2: [initial, ...line2rest],
-    line3,
-    line4
+    ctx: { translate }
   } = props;
+
+  const line1 = translate("homeLine1", language);
+  const [line2Initial, ...line2Rest] = translate("homeLine2", language);
+  const line3 = translate("homeLine3", language);
+  const line4 = translate("homeLine4", language);
 
   return (
     <div className={classnames("home-copy", language)}>
       <h1>
         <span className="line-1">{line1}</span>
         <span className="line-2">
-          <span className="drop-cap">{initial}</span>
-          {line2rest}
+          <span className="drop-cap">{line2Initial}</span>
+          {line2Rest}
         </span>
       </h1>
       <p className="line-3">{line3}</p>
@@ -30,11 +34,8 @@ function HomeCopy(props) {
 }
 
 HomeCopy.propTypes = {
-  language: PropTypes.string,
-  line1: PropTypes.string,
-  line2: PropTypes.string,
-  line3: PropTypes.string,
-  line4: PropTypes.string
+  ctxt: PropTypes.object,
+  language: PropTypes.string
 };
 
-export default HomeCopy;
+export default WithCtx(HomeCopy);

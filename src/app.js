@@ -62,7 +62,8 @@ class App extends Component {
     return (
       <ContextProvider
         value={{
-          language: this.state.language,
+          currentLanguage: this.state.language,
+          languages: LANG,
           swapLanguage: this.swapLanguage,
           translate: this.translate
         }}

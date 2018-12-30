@@ -1,16 +1,21 @@
 import React from "react";
 import DocumentTitle from "react-document-title";
 
-import { ContextConsumer } from "../../context";
+import { WithCtx } from "../../context";
 
 import HomeCopy from "../home-copy";
 import Horizon from "../horizon";
 import Landscape from "../landscape";
+import LanguageSwitcher from "../language-switcher";
 import Moon from "../moon";
 
 import "./page-home.scss";
 
 function PageHome(props) {
+  const {
+    ctx: { translate }
+  } = props;
+
   return (
     <DocumentTitle title={props.translate("siteTitle")}>
       <section className="page home">
@@ -32,13 +37,7 @@ function PageHome(props) {
         </div>
 
         <article>
-          <HomeCopy
-            language="en"
-            line1={props.translate("homeLine1", "en")}
-            line2={props.translate("homeLine2", "en")}
-            line3={props.translate("homeLine3", "en")}
-            line4={props.translate("homeLine4", "en")}
-          >
+          <HomeCopy language="en">
             <Landscape>
               <div className="stag" />
             </Landscape>
@@ -47,13 +46,8 @@ function PageHome(props) {
           <Horizon>
             <Moon />
           </Horizon>
-          <HomeCopy
-            language="fr"
-            line1={props.translate("homeLine1", "fr")}
-            line2={props.translate("homeLine2", "fr")}
-            line3={props.translate("homeLine3", "fr")}
-            line4={props.translate("homeLine4", "fr")}
-          >
+
+          <HomeCopy language="fr">
             <Landscape>
               <div className="fox mirror" />
             </Landscape>
@@ -64,10 +58,4 @@ function PageHome(props) {
   );
 }
 
-class PageHomeController extends React.Component {
-  render() {
-    return <ContextConsumer>{ctxt => <PageHome {...ctxt} />}</ContextConsumer>;
-  }
-}
-
-export default PageHomeController;
+export default WithCtx(PageHome);
