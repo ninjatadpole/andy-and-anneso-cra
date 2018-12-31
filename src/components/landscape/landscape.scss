@@ -20,7 +20,7 @@
   .fox {
     @include image-ratio("../../static/images/fox.png", 84%);
 
-    bottom: -4px;
+    bottom: -3px;
     left: 31%;
     position: absolute;
     width: 4.5%;
