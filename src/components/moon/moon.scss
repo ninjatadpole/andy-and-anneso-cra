@@ -14,5 +14,28 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 20%;
+
+    &::after {
+      display: none;
+    }
+
+    .half-moon {
+      background-image: url("../../static/images/moon.png");
+      background-size: cover;
+      height: 50%;
+      position: absolute;
+      width: 100%;
+    }
+
+    .half-moon:first-of-type {
+      background-position: 50% 0;
+      top: 0;
+    }
+
+    .half-moon:last-of-type {
+      background-position: 50% 100%;
+      bottom: 0;
+      transform: rotate(0deg);
+    }
   }
 }
