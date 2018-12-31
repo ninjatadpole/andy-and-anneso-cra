@@ -1,6 +1,7 @@
 @import "../../styles/mixins.scss";
 
 .language-switcher {
+  display: flex;
   position: relative;
 
   .flag {

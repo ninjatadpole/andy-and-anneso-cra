@@ -2,7 +2,7 @@
 @import "../../styles/classes.scss";
 
 .landscape {
-  @extend %max-width;
+  @extend .max-width;
 
   height: 150px;
   position: relative;

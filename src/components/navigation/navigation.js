@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import "./nav.scss";
+import "./navigation.scss";
 
-export default function Nav(props) {
+export default function Navigation(props) {
   return (
     <nav className="navigation">
       <NavLink to="/">Home</NavLink>

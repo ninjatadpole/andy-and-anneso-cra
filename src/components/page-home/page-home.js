@@ -6,7 +6,6 @@ import { WithCtx } from "../../context";
 import HomeCopy from "../home-copy";
 import Horizon from "../horizon";
 import Landscape from "../landscape";
-import LanguageSwitcher from "../language-switcher";
 import Moon from "../moon";
 
 import "./page-home.scss";
@@ -19,8 +18,6 @@ function PageHome(props) {
   return (
     <DocumentTitle title={translate("siteTitle")}>
       <section className="page home">
-        <LanguageSwitcher />
-
         <article>
           <HomeCopy language="en">
             <Landscape>

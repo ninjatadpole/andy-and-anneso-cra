@@ -23,13 +23,9 @@ function SchoolIcon(props) {
   return <Icon className="school">S</Icon>;
 }
 
-function StarIcon(props) {
-  return <Icon className="star">*</Icon>;
-}
-
 function Timeline(props) {
   return (
-    <VerticalTimeline>
+    <VerticalTimeline className="max-width">
       <VerticalTimelineElement
         date="11:30"
         iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}

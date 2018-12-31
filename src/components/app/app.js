@@ -3,15 +3,16 @@ import { Route, Switch } from "react-router-dom";
 import DocumentTitle from "react-document-title";
 import classnames from "classnames";
 
-import { ContextProvider } from "./context";
+import { ContextProvider } from "../../context";
 
-import Nav from "./components/nav";
-import PageHome from "./components/page-home";
-import PageMap from "./components/page-map";
-import PageTimeline from "./components/page-timeline";
+import LanguageSwitcher from "../language-switcher";
+import Navigation from "../navigation";
+import PageHome from "../page-home";
+import PageMap from "../page-map";
+import PageTimeline from "../page-timeline";
 
-import translate from "./data/translate";
-import { getStorageValue, setStorageValue } from "./data/local-storage";
+import translate from "../../data/translate";
+import { getStorageValue, setStorageValue } from "../../data/local-storage";
 
 import "./app.scss";
 
@@ -70,7 +71,11 @@ class App extends Component {
       >
         <DocumentTitle title={this.translate("siteTitle")}>
           <div className={classnames("app", this.state.language)}>
-            <Nav />
+            <header>
+              <Navigation />
+              <LanguageSwitcher />
+            </header>
+
             <Switch>
               <Route exact path="/" component={PageHome} />
               <Route path="/map" component={PageMap} />

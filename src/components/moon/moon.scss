@@ -2,7 +2,7 @@
 @import "../../styles/classes.scss";
 
 .moon-container {
-  @extend %max-width;
+  @extend .max-width;
 
   width: 100%;
 
