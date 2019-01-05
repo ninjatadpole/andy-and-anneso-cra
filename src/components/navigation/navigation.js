@@ -9,6 +9,7 @@ export default function Navigation(props) {
       <NavLink to="/">Home</NavLink>
       <NavLink to="/map">Map</NavLink>
       <NavLink to="/timeline">Timeline</NavLink>
+      <NavLink to="/questions">Questions</NavLink>
     </nav>
   );
 }

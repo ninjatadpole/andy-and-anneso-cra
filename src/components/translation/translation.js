@@ -1,20 +1,25 @@
 import React from "react";
 import classnames from "classnames";
 
-import { translate } from "../../data/translations";
+import { WithCtx } from "../../context";
 
 import "./translation.scss";
 
 class Translation extends React.Component {
   render() {
-    const { id, language, tag } = this.props;
+    const {
+      ctx: { translate },
+      id,
+      language,
+      tag
+    } = this.props;
 
     const Wrapper = tag || "span";
 
     return (
       <Wrapper className={classnames("translation", this.props.className)}>
         <span className={`lang lang-${language}`}>
-          {translate(id, language)}.
+          {translate(id, language)}
         </span>
         {this.props.children}
       </Wrapper>
@@ -22,4 +27,4 @@ class Translation extends React.Component {
   }
 }
 
-export default Translation;
+export default WithCtx(Translation);

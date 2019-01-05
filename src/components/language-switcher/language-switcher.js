@@ -18,7 +18,7 @@ function LanguageSwitcher(props) {
             className={classnames("flag", language)}
             disabled={currentLanguage === language}
             onClick={swapLanguage}
-            title={translate(`languageSwitcher.${language}`)}
+            title={translate(`switcher.${language}`)}
             key={`lang-${language}`}
           >
             <span className="language">{language.toUpperCase()}</span>

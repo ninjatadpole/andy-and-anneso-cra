@@ -1,23 +1,40 @@
 import React from "react";
 
+import homeTranslations from "./translations-home";
+import questionTranslations from "./translations-questions";
+
 export function translate(key, language) {
-  console.log("LANGUAGE", language);
-  console.log("KEY", key);
   const result = searchObj(key, STRINGS);
 
-  if (result[language] !== null) {
-    return result[language];
+  if (result !== null) {
+    if (result[language] !== undefined) {
+      return result[language];
+    } else {
+      return result;
+    }
   } else {
-    return `${key}.${language}`;
+    return key;
   }
 }
 
 function searchObj(key = "", dictionary = {}) {
-  const result = key
-    .split(".")
-    .reduce((obj, index) => (obj ? obj[index] : null), dictionary);
+  const result = recurseObjectProps(key.split("."), dictionary);
 
   return result || key;
+}
+
+function recurseObjectProps(propArray, propObject) {
+  return propArray.reduce((obj, prop) => {
+    if (obj) {
+      if (obj[prop]) {
+        return obj[prop];
+      }
+      if (prop.indexOf("[") !== -1) {
+        const splitIndex = prop.replace("]", "").split("[");
+        return recurseObjectProps(splitIndex, obj);
+      }
+    }
+  }, propObject);
 }
 
 export const STRINGS = {
@@ -27,39 +44,12 @@ export const STRINGS = {
       fr: "Anne-So & Andy - le 24 Août 2019"
     }
   },
-  home: {
-    title: {
-      en: "Andy & Anne-So - August 24th 2019",
-      fr: "Anne-So & Andy - le 24 Août 2019"
-    },
-    line1: {
-      en: "Come and join",
-      fr: "Venez rejoindre"
-    },
-    line2: {
-      en: (
-        <React.Fragment>
-          <span className="drop-cap">A</span>
-          ndy & Anne-So
-        </React.Fragment>
-      ),
-      fr: (
-        <React.Fragment>
-          <span className="drop-cap">A</span>
-          nne-So & Andy
-        </React.Fragment>
-      )
-    },
-    line3: {
-      en: "to celebrate their wedding",
-      fr: "pour leur mariage"
-    },
-    line4: {
-      en: "Noon on the 24th August 2019",
-      fr: "le 24 Août 2019 à midi"
-    }
-  },
+  home: homeTranslations,
   map: {
+    title: {
+      en: "Map",
+      fr: "Carte"
+    },
     ceremony: {
       en: "Ceremony: Islington Town Hall",
       fr: "La Cérémonie: La Mairie"
@@ -69,9 +59,7 @@ export const STRINGS = {
       fr: "La Fête: Le Depot"
     }
   },
-  questions: {
-    title: { en: "Answers", fr: "Réponses" }
-  },
+  questions: questionTranslations,
   switcher: {
     en: "In English",
     fr: "En Français"

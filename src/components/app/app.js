@@ -9,6 +9,7 @@ import LanguageSwitcher from "../language-switcher";
 import Navigation from "../navigation";
 import PageHome from "../page-home";
 import PageMap from "../page-map";
+import PageQuestions from "../page-questions";
 import PageTimeline from "../page-timeline";
 
 import { translate } from "../../data/translations";
@@ -59,6 +60,7 @@ class App extends Component {
     if (language) {
       return translate(key, language);
     }
+    return "";
   };
 
   render() {
@@ -71,7 +73,7 @@ class App extends Component {
           translate: this.getTranslation
         }}
       >
-        <DocumentTitle title={this.getTranslation("siteTitle")}>
+        <DocumentTitle title={this.getTranslation("global.title")}>
           <div className={classnames("app", this.state.language)}>
             <header>
               <Navigation />
@@ -82,6 +84,7 @@ class App extends Component {
               <Route exact path="/" component={PageHome} />
               <Route path="/map" component={PageMap} />
               <Route path="/timeline" component={PageTimeline} />
+              <Route path="/questions" component={PageQuestions} />
               <Route component={PageHome} />
             </Switch>
           </div>
