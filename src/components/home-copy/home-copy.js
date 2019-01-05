@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 
 import { WithCtx } from "../../context";
+import Translation from "../translation";
 
 import "./home-copy.scss";
 
@@ -12,22 +13,24 @@ function HomeCopy(props) {
     ctx: { translate }
   } = props;
 
-  const line1 = translate("homeLine1", language);
-  const [line2Initial, ...line2Rest] = translate("homeLine2", language);
-  const line3 = translate("homeLine3", language);
-  const line4 = translate("homeLine4", language);
-
   return (
     <div className={classnames("home-copy", language)}>
       <h1>
-        <span className="line-1">{line1}</span>
-        <span className="line-2">
-          <span className="drop-cap">{line2Initial}</span>
-          {line2Rest}
-        </span>
+        <Translation className="line-1" id="home.line1" language={language} />
+        <Translation className="line-2" id="home.line2" language={language} />
       </h1>
-      <p className="line-3">{line3}</p>
-      <p className="line-4">{line4}</p>
+      <Translation
+        className="line-3"
+        tag="p"
+        id="home.line3"
+        language={language}
+      />
+      <Translation
+        className="line-4"
+        tag="p"
+        id="home.line4"
+        language={language}
+      />
       {props.children}
     </div>
   );

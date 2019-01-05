@@ -16,7 +16,7 @@ function PageHome(props) {
   } = props;
 
   return (
-    <DocumentTitle title={translate("siteTitle")}>
+    <DocumentTitle title={translate("home.title")}>
       <section className="page home">
         <article>
           <HomeCopy language="en">

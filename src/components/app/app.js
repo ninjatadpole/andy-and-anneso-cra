@@ -11,7 +11,7 @@ import PageHome from "../page-home";
 import PageMap from "../page-map";
 import PageTimeline from "../page-timeline";
 
-import translate from "../../data/translate";
+import { translate } from "../../data/translations";
 import { getStorageValue, setStorageValue } from "../../data/local-storage";
 
 import "./app.scss";
@@ -55,8 +55,10 @@ class App extends Component {
     setStorageValue("language", LANG[newIndex]);
   };
 
-  translate = (key, language) => {
-    return translate(language || this.state.language, key);
+  getTranslation = (key, language = this.state.language) => {
+    if (language) {
+      return translate(key, language);
+    }
   };
 
   render() {
@@ -66,10 +68,10 @@ class App extends Component {
           currentLanguage: this.state.language,
           languages: LANG,
           swapLanguage: this.swapLanguage,
-          translate: this.translate
+          translate: this.getTranslation
         }}
       >
-        <DocumentTitle title={this.translate("siteTitle")}>
+        <DocumentTitle title={this.getTranslation("siteTitle")}>
           <div className={classnames("app", this.state.language)}>
             <header>
               <Navigation />
