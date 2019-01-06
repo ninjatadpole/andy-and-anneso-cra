@@ -8,10 +8,7 @@ import Translation from "../translation";
 import "./home-copy.scss";
 
 function HomeCopy(props) {
-  const {
-    language,
-    ctx: { translate }
-  } = props;
+  const { language } = props;
 
   return (
     <div className={classnames("home-copy", language)}>

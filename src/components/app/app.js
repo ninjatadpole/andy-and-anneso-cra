@@ -83,7 +83,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={PageHome} />
               <Route path="/map" component={PageMap} />
-              <Route path="/timeline" component={PageTimeline} />
+              <Route path="/schedule" component={PageTimeline} />
               <Route path="/answers" component={PageQuestions} />
               <Route component={PageHome} />
             </Switch>

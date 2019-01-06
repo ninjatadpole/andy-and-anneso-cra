@@ -6,6 +6,7 @@ import {
 import classnames from "classnames";
 
 import "react-vertical-timeline-component/style.min.css";
+import "./timeline.scss";
 
 function Icon(props) {
   return (
@@ -25,7 +26,7 @@ function SchoolIcon(props) {
 
 function Timeline(props) {
   return (
-    <VerticalTimeline className="max-width">
+    <VerticalTimeline className="timeline">
       <VerticalTimelineElement
         date="11:30"
         iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}

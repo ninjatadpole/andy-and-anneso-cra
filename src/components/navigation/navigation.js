@@ -14,7 +14,7 @@ export default function Navigation(props) {
       <NavLink to="/map">
         <Translation id="navigation.maps" />
       </NavLink>
-      <NavLink to="/timeline">
+      <NavLink to="/schedule">
         <Translation id="navigation.timeline" />
       </NavLink>
       <NavLink to="/answers">

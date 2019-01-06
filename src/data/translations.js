@@ -1,5 +1,3 @@
-import React from "react";
-
 import homeTranslations from "./translations-home";
 import questionTranslations from "./translations-questions";
 
@@ -34,6 +32,7 @@ function recurseObjectProps(propArray, propObject) {
         return recurseObjectProps(splitIndex, obj);
       }
     }
+    return null;
   }, propObject);
 }
 
