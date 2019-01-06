@@ -84,7 +84,7 @@ class App extends Component {
               <Route exact path="/" component={PageHome} />
               <Route path="/map" component={PageMap} />
               <Route path="/timeline" component={PageTimeline} />
-              <Route path="/questions" component={PageQuestions} />
+              <Route path="/answers" component={PageQuestions} />
               <Route component={PageHome} />
             </Switch>
           </div>
