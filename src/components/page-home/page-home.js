@@ -31,7 +31,7 @@ function PageHome(props) {
 
           <HomeCopy language="fr">
             <Landscape>
-              <div className="fox mirror" />
+              <div className="fox" />
             </Landscape>
           </HomeCopy>
         </article>

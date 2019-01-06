@@ -1,10 +1,18 @@
+@import "../../styles/responsive.scss";
+
 .horizon {
   position: relative;
   z-index: 1;
 
   .line {
     display: block;
-    height: 6px;
+    height: 4px;
     width: 100%;
+  }
+
+  @include media(">=tablet") {
+    .line {
+      height: 6px;
+    }
   }
 }

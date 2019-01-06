@@ -1,3 +1,4 @@
+@import "../../styles/responsive.scss";
 @import "../../styles/mixins.scss";
 @import "../../styles/classes.scss";
 
@@ -11,36 +12,36 @@
   .stag {
     @include image-ratio("../../static/images/stag.png", 85%);
 
-    bottom: -4px;
-    left: 25%;
+    bottom: -3px;
+    left: 20%;
     position: absolute;
-    width: 9%;
+    width: 14%;
   }
 
   .fox {
     @include image-ratio("../../static/images/fox.png", 84%);
 
-    bottom: -3px;
-    left: 31%;
+    bottom: -2px;
+    right: 22%;
     position: absolute;
-    width: 4.5%;
+    width: 7.5%;
   }
 
   .mountain {
     @include image-ratio("../../static/images/mountain.png", 48%);
 
     bottom: 0;
-    right: 10%;
+    right: -5%;
     position: absolute;
-    width: 20%;
+    width: 30%;
   }
 
   .trees {
     bottom: 0;
-    height: 150px;
-    left: 10%;
+    height: 100%;
+    left: -5%;
     position: absolute;
-    width: 20%;
+    width: 30%;
 
     .tree-1 {
       @include image-ratio("../../static/images/tree-1.png", 230%);
@@ -55,7 +56,6 @@
       @include image-ratio("../../static/images/tree-2.png", 200%);
 
       bottom: 0;
-      left: auto;
       position: absolute;
       right: 0;
       width: 50%;
@@ -69,13 +69,101 @@
     }
 
     .mountain {
-      left: 10%;
+      left: -5%;
       right: auto;
     }
 
     .trees {
       left: auto;
+      right: -5%;
+    }
+  }
+
+  @include media(">=tablet") {
+    .stag {
+      bottom: -4px;
+      left: 23%;
+      width: 12%;
+    }
+
+    .fox {
+      bottom: -3px;
+      right: 24%;
+      width: 6.5%;
+    }
+
+    .mountain {
+      right: 2%;
+      width: 25%;
+    }
+
+    .trees {
+      left: 2%;
+      width: 25%;
+
+      .tree-1 {
+        width: 50%;
+      }
+
+      .tree-2 {
+        width: 50%;
+      }
+    }
+
+    .home-copy.fr & {
+      .mountain {
+        left: 2%;
+        right: auto;
+      }
+
+      .trees {
+        left: auto;
+        right: 2%;
+      }
+    }
+  }
+
+  @include media(">=desktop") {
+    .stag {
+      bottom: -4px;
+      left: 27%;
+      width: 9.5%;
+    }
+
+    .fox {
+      bottom: -3px;
+      right: 28%;
+      width: 5%;
+    }
+
+    .mountain {
       right: 10%;
+      width: 20%;
+    }
+
+    .trees {
+      left: 10%;
+      width: 20%;
+
+      .tree-1 {
+        width: 50%;
+      }
+
+      .tree-2 {
+        width: 50%;
+      }
+    }
+
+    .home-copy.fr & {
+      .mountain {
+        left: 10%;
+        right: auto;
+      }
+
+      .trees {
+        left: auto;
+        right: 10%;
+      }
     }
   }
 }
