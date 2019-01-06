@@ -1,15 +1,25 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import Translation from "../translation";
+
 import "./navigation.scss";
 
 export default function Navigation(props) {
   return (
     <nav className="navigation">
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/map">Map</NavLink>
-      <NavLink to="/timeline">Timeline</NavLink>
-      <NavLink to="/questions">Questions</NavLink>
+      <NavLink to="/">
+        <Translation id="navigation.home" />
+      </NavLink>
+      <NavLink to="/map">
+        <Translation id="navigation.maps" />
+      </NavLink>
+      <NavLink to="/timeline">
+        <Translation id="navigation.timeline" />
+      </NavLink>
+      <NavLink to="/answers">
+        <Translation id="navigation.answers" />
+      </NavLink>
     </nav>
   );
 }

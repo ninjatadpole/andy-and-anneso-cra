@@ -59,6 +59,24 @@ export const STRINGS = {
       fr: "La Fête: Le Depot"
     }
   },
+  navigation: {
+    home: {
+      en: "Home",
+      fr: "La Maison"
+    },
+    maps: {
+      en: "Maps",
+      fr: "Les Cartes"
+    },
+    timeline: {
+      en: "Schedule",
+      fr: "L'horaire"
+    },
+    answers: {
+      en: "Answers",
+      fr: "Réponses"
+    }
+  },
   questions: questionTranslations,
   switcher: {
     en: "In English",

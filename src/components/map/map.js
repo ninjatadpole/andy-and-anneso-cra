@@ -1,6 +1,8 @@
 import React from "react";
 import { InfoWindow, Map, Marker, GoogleApiWrapper } from "google-maps-react";
 
+import { WithCtx } from "../../context";
+
 import "./map.scss";
 
 class WeddingMap extends React.Component {
@@ -14,16 +16,18 @@ class WeddingMap extends React.Component {
 
   markers = [
     {
+      translationId: "map.ceremony",
       autoOpen: true,
-      title: "Islington Town Hall",
+      title: "",
       pos: {
         lat: 51.5412773,
         lng: -0.1023817
       }
     },
     {
+      translationId: "map.party",
       // autoOpen: true,
-      title: "The Depot",
+      title: "",
       pos: {
         lat: 51.5413382,
         lng: -0.1286466
@@ -34,6 +38,17 @@ class WeddingMap extends React.Component {
   bounds = null;
 
   componentDidMount() {
+    this.addMarkers();
+  }
+
+  componentDidUpdate(oldProps) {
+    if (oldProps.ctx.language !== this.props.ctx.language) {
+      this.addMarkers();
+      this.clickMarker();
+    }
+  }
+
+  addMarkers = () => {
     const adjustment = 0;
     this.bounds = new this.props.google.maps.LatLngBounds();
     for (let i = 0; i < this.markers.length; i++) {
@@ -43,7 +58,7 @@ class WeddingMap extends React.Component {
       this.bounds.extend(lesserPos);
       this.bounds.extend(greaterPos);
     }
-  }
+  };
 
   createMarkerRef = markerRef => {
     if (markerRef) {
@@ -84,26 +99,31 @@ class WeddingMap extends React.Component {
   };
 
   render() {
+    const {
+      google,
+      ctx: { translate, currentLanguage }
+    } = this.props;
+
     return (
       <div className="wedding-map">
         <Map
-          google={this.props.google}
-          style={{ width: "400px", height: "400px" }}
+          google={google}
+          style={{ width: "600px", height: "400px" }}
           bounds={this.bounds}
           initialCenter={this.markers[0].pos}
           onReady={this.clickMarker}
           fullscreenControl={false}
           mapTypeControl={false}
         >
-          {this.markers.map((map, index) => {
+          {this.markers.map((marker, index) => {
             return (
               <Marker
-                name={map.title}
-                title={map.title}
-                position={map.pos}
+                name={translate(marker.translationId)}
+                title={translate(marker.translationId)}
+                position={marker.pos}
                 onClick={this.onMarkerClick}
-                key={`map-${index}`}
-                ref={map.autoOpen ? this.createMarkerRef : () => {}}
+                key={`marker-${index}-${currentLanguage}`}
+                ref={marker.autoOpen ? this.createMarkerRef : () => {}}
               />
             );
           })}
@@ -125,5 +145,6 @@ class WeddingMap extends React.Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: process.env.REACT_APP_GOOGLE_MAPS
-})(WeddingMap);
+  apiKey: process.env.REACT_APP_GOOGLE_MAPS,
+  wrappingComponent: React.Fragment
+})(WithCtx(WeddingMap));
