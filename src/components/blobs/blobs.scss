@@ -1,0 +1,26 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/responsive.scss";
+
+$blob-colours: "blue" "green" "purple" "gold";
+$blob-versions: 95% 97% 70%;
+
+.blobs {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .blob {
+    position: absolute;
+  }
+
+  @for $version from 1 through length($blob-versions) {
+    $ratio: nth($blob-versions, $version);
+
+    @each $colour in $blob-colours {
+      .blob-#{$version}-#{$colour} {
+        $url: "../../static/images/blob-#{$version}-#{$colour}.png";
+        @include image-ratio($url, $ratio);
+      }
+    }
+  }
+}
