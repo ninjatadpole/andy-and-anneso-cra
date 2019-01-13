@@ -59,9 +59,13 @@ export const STRINGS = {
     }
   },
   navigation: {
+    menu: {
+      en: "Menu",
+      fr: "Le Menu"
+    },
     home: {
       en: "Home",
-      fr: "La Maison"
+      fr: "L'accueil"
     },
     maps: {
       en: "Maps",

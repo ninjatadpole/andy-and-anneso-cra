@@ -1,12 +1,14 @@
 @import "../../styles/mixins.scss";
+@import "../../styles/responsive.scss";
 
 .language-switcher {
   display: flex;
-  font-size: 1.6rem;
+  font-size: 2rem;
+  margin-right: 12px;
   position: relative;
 
   .language {
-    margin: 0 6px;
+    margin-left: 16px;
     padding: 4px 0;
     position: relative;
 
@@ -17,12 +19,12 @@
         background: transparent url("../../static/images/horizon.png") left
           center no-repeat;
         background-size: cover;
-        bottom: -2px;
         content: "";
         display: block;
         height: 2px;
         left: 0;
         position: absolute;
+        top: -2px;
         transition: width 300ms ease-in-out;
         width: 0;
       }
@@ -31,6 +33,19 @@
     &:disabled {
       .text::after {
         width: 100%;
+      }
+    }
+  }
+
+  @include media(">=tablet") {
+    font-size: 1.6rem;
+
+    .language {
+      margin-left: 12px;
+
+      .text::after {
+        top: auto;
+        bottom: -2px;
       }
     }
   }

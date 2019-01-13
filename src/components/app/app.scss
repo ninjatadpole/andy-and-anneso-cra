@@ -1,18 +1,30 @@
 @import "../../styles/classes.scss";
+@import "../../styles/colours.scss";
+@import "../../styles/responsive.scss";
 
 .app {
+  display: flex;
+  flex-direction: column-reverse;
+
   header {
     @extend .max-width;
 
     align-items: center;
+    border-top: 1px solid transparentize($black, 0.7);
     display: flex;
     height: $header-height;
     justify-content: space-between;
-    padding: 0 8px;
+    position: relative;
+    z-index: 2;
   }
 
   .page {
     height: calc(100vh - #{$header-height});
     overflow-x: hidden;
+    z-index: 1;
+  }
+
+  @include media(">=tablet") {
+    flex-direction: column;
   }
 }
