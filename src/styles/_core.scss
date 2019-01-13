@@ -1,5 +1,12 @@
 @import "./colours";
 
+html {
+  font-size: 62.5%;
+} /* Essentially 10px */
+body {
+  font-size: 1.6rem;
+} /* Essentially 16px */
+
 html,
 body {
   color: $black;
@@ -46,5 +53,7 @@ button {
   appearance: none;
   background-color: transparent;
   border: 0;
+  font-family: inherit;
+  font-size: 100%;
   padding: 0;
 }

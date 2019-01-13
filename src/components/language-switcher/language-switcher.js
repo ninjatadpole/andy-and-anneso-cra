@@ -15,13 +15,13 @@ function LanguageSwitcher(props) {
       {languages.map(language => {
         return (
           <button
-            className={classnames("flag", language)}
+            className={classnames("language", language)}
             disabled={currentLanguage === language}
             onClick={swapLanguage}
             title={translate(`switcher.${language}`)}
             key={`lang-${language}`}
           >
-            <span className="language">{language.toUpperCase()}</span>
+            <span className="text">{translate(`switcher.${language}`)}</span>
           </button>
         );
       })}
