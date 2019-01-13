@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import DocumentTitle from "react-document-title";
 import classnames from "classnames";
 
-import { ContextProvider } from "../../context";
+import { ContextProvider } from "../../utils/context";
 
 import LanguageSwitcher from "../language-switcher";
 import Navigation from "../navigation";

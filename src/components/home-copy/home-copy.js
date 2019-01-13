@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-import { WithCtx } from "../../context";
+import { WithCtx } from "../../utils/context";
 import Translation from "../translation";
 
 import "./home-copy.scss";

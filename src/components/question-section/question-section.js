@@ -2,17 +2,9 @@ import React from "react";
 import classnames from "classnames";
 
 import Translation from "../translation";
+import sizedArray from "../../utils/sized-array";
 
 import "./question-section.scss";
-
-function sizedArray(length = 0) {
-  const lengthNum = parseInt(length, 10);
-  if (isNaN(lengthNum)) {
-    return [];
-  }
-
-  return [...Array(parseInt(length, 10))];
-}
 
 export default function QuestionSection(props) {
   const { dictionary, count } = props;

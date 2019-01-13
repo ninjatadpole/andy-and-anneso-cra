@@ -1,7 +1,7 @@
 import React from "react";
 import classnames from "classnames";
 
-import { WithCtx } from "../../context";
+import { WithCtx } from "../../utils/context";
 
 import "./language-switcher.scss";
 

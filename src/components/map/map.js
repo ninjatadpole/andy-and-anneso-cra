@@ -1,7 +1,7 @@
 import React from "react";
 import { InfoWindow, Map, Marker, GoogleApiWrapper } from "google-maps-react";
 
-import { WithCtx } from "../../context";
+import { WithCtx } from "../../utils/context";
 
 import "./map.scss";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import DocumentTitle from "react-document-title";
 
-import { WithCtx } from "../../context";
+import { WithCtx } from "../../utils/context";
 
 import HomeCopy from "../home-copy";
 import Horizon from "../horizon";
