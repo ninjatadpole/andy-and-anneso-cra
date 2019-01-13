@@ -2,6 +2,7 @@ import React from "react";
 import classnames from "classnames";
 
 import { WithCtx } from "../../utils/context";
+import Blobs from "../blobs";
 
 import "./moon.scss";
 
@@ -19,6 +20,7 @@ function Moon(props) {
             key={`moon-${language}`}
           />
         ))}
+        <Blobs gold={[3, 2]} />
       </div>
     </div>
   );

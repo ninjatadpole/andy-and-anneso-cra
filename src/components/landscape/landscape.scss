@@ -5,6 +5,8 @@
 .landscape {
   @extend .max-width;
 
+  $offset: -5%;
+
   height: 150px;
   position: relative;
   width: 100%;
@@ -30,16 +32,35 @@
   .mountain {
     @include image-ratio("../../static/images/mountain.png", 48%);
 
-    bottom: 0;
-    right: -5%;
+    bottom: 6px;
+    right: $offset;
+    opacity: 0.8;
     position: absolute;
     width: 30%;
+
+    .blobs {
+      position: absolute;
+      top: 50%;
+      width: 120%;
+
+      .blob-1 {
+        right: 10%;
+        transform: translateY(-30%);
+        width: 100%;
+      }
+
+      .blob-3 {
+        left: -20%;
+        transform: translateY(-20%);
+        width: 90%;
+      }
+    }
   }
 
   .trees {
     bottom: 0;
     height: 100%;
-    left: -5%;
+    left: $offset;
     position: absolute;
     width: 30%;
 
@@ -50,6 +71,30 @@
       left: 0;
       position: absolute;
       width: 50%;
+
+      .blobs {
+        position: absolute;
+        top: 50%;
+        width: 140%;
+
+        .blob-1 {
+          left: 0;
+          transform: translateY(-100%);
+          width: 90%;
+        }
+
+        .blob-2 {
+          right: 0;
+          transform: translateY(-50%);
+          width: 90%;
+        }
+
+        .blob-3 {
+          left: 0;
+          transform: translateY(0);
+          width: 90%;
+        }
+      }
     }
 
     .tree-2 {
@@ -59,6 +104,30 @@
       position: absolute;
       right: 0;
       width: 50%;
+
+      .blobs {
+        position: absolute;
+        top: 50%;
+        width: 120%;
+
+        .blob-1 {
+          right: 0;
+          transform: translateY(-50%);
+          width: 90%;
+        }
+
+        .blob-2 {
+          left: 0;
+          transform: translateY(-100%);
+          width: 90%;
+        }
+
+        .blob-3 {
+          right: 0;
+          transform: translateY(0);
+          width: 90%;
+        }
+      }
     }
   }
 
@@ -69,81 +138,51 @@
     }
 
     .mountain {
-      left: -5%;
+      left: $offset;
       right: auto;
     }
 
     .trees {
       left: auto;
-      right: -5%;
+      right: $offset;
     }
   }
 
   @include media(">=tablet") {
+    $offset: 2.5%;
+
     .stag {
       bottom: -4px;
       left: 23%;
-      width: 12%;
-    }
-
-    .fox {
-      bottom: -3px;
-      right: 24%;
-      width: 6.5%;
-    }
-
-    .mountain {
-      right: 2%;
-      width: 25%;
-    }
-
-    .trees {
-      left: 2%;
-      width: 25%;
-
-      .tree-1 {
-        width: 50%;
-      }
-
-      .tree-2 {
-        width: 50%;
-      }
-    }
-
-    .home-copy.fr & {
-      .mountain {
-        left: 2%;
-        right: auto;
-      }
-
-      .trees {
-        left: auto;
-        right: 2%;
-      }
-    }
-  }
-
-  @include media(">=desktop") {
-    .stag {
-      bottom: -4px;
-      left: 27%;
       width: 9.5%;
     }
 
     .fox {
       bottom: -3px;
-      right: 28%;
+      right: 24%;
       width: 5%;
     }
 
     .mountain {
-      right: 10%;
+      right: $offset;
       width: 20%;
+
+      .blobs {
+        width: 150%;
+
+        .blob-1 {
+          right: 5%;
+        }
+
+        .blob-3 {
+          left: -15%;
+        }
+      }
     }
 
     .trees {
-      left: 10%;
-      width: 20%;
+      left: $offset;
+      width: 25%;
 
       .tree-1 {
         width: 50%;
@@ -156,13 +195,63 @@
 
     .home-copy.fr & {
       .mountain {
-        left: 10%;
+        left: $offset;
         right: auto;
       }
 
       .trees {
         left: auto;
-        right: 10%;
+        right: $offset;
+      }
+    }
+  }
+
+  @include media(">=desktop") {
+    $offset: 5%;
+
+    .stag {
+      bottom: -4px;
+      left: 25%;
+      width: 9.5%;
+    }
+
+    .fox {
+      bottom: -3px;
+      right: 26%;
+      width: 5%;
+    }
+
+    .mountain {
+      right: $offset;
+      width: 20%;
+
+      .blobs {
+        width: 160%;
+      }
+    }
+
+    .trees {
+      left: $offset;
+      width: 25%;
+
+      .tree-1 {
+        width: 50%;
+      }
+
+      .tree-2 {
+        width: 50%;
+      }
+    }
+
+    .home-copy.fr & {
+      .mountain {
+        left: $offset;
+        right: auto;
+      }
+
+      .trees {
+        left: auto;
+        right: $offset;
       }
     }
   }
