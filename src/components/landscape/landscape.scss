@@ -78,21 +78,21 @@
         width: 140%;
 
         .blob-1 {
-          left: 0;
-          transform: translateY(-100%);
-          width: 90%;
+          left: -5%;
+          transform: translateY(-105%);
+          width: 95%;
         }
 
         .blob-2 {
           right: 0;
           transform: translateY(-50%);
-          width: 90%;
+          width: 95%;
         }
 
         .blob-3 {
           left: 0;
           transform: translateY(0);
-          width: 90%;
+          width: 95%;
         }
       }
     }
@@ -111,20 +111,18 @@
         width: 120%;
 
         .blob-1 {
-          right: 0;
-          transform: translateY(-50%);
+          transform: translateY(-25%);
           width: 90%;
         }
 
         .blob-2 {
           left: 0;
-          transform: translateY(-100%);
+          transform: translateY(-110%);
           width: 90%;
         }
 
         .blob-3 {
-          right: 0;
-          transform: translateY(0);
+          transform: translateY(-60%);
           width: 90%;
         }
       }
