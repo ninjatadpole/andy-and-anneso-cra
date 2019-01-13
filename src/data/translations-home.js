@@ -28,7 +28,15 @@ export default {
     fr: "pour leur mariage"
   },
   line4: {
-    en: "Noon on the 24th August 2019",
-    fr: "le 24 Août 2019 à midi"
+    en: (
+      <React.Fragment>
+        Noon on the <span className="no-wrap">24th August 2019</span>
+      </React.Fragment>
+    ),
+    fr: (
+      <React.Fragment>
+        le 24 Août 2019 <span className="no-wrap">à midi</span>
+      </React.Fragment>
+    )
   }
 };
