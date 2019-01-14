@@ -8,7 +8,7 @@
   $offset: -5%;
 
   height: 0;
-  padding-top: 15%;
+  padding-top: 18%;
   position: relative;
   width: 100%;
 
@@ -207,8 +207,6 @@
 
   @include media(">=desktop") {
     $offset: 5%;
-
-    padding-top: 150px;
 
     .stag {
       bottom: -4px;

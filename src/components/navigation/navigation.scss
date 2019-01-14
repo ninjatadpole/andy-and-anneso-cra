@@ -19,6 +19,7 @@
   }
 
   .menu-button {
+    color: $white;
     font-size: 2rem;
   }
 
@@ -52,8 +53,8 @@
   a {
     align-items: center;
     background: $white;
-    background-size: contain;
     border-top: 1px solid transparentize($black, 0.7);
+    color: $white;
     display: flex;
     flex-shrink: 0;
     height: 46px;
@@ -62,19 +63,8 @@
     text-decoration: none;
     z-index: 2;
 
-    &::before {
-      background-image: url("../../static/images/paper.jpg");
-      content: "";
-      height: 100%;
-      left: 0;
-      opacity: 0.4;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
-
     &.active {
-      background-image: url("../../static/images/blob-2-green.png");
+      background-image: url("../../static/images/blob-2-purple.png");
       background-position: 4px 50%;
       background-repeat: no-repeat;
       background-size: contain;
@@ -106,7 +96,7 @@
     }
 
     a {
-      background: none;
+      background: transparent;
       border: none;
       height: auto;
       margin-right: 12px;

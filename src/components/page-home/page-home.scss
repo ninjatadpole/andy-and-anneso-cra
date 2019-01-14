@@ -2,12 +2,21 @@
 
 .home {
   font-weight: bold;
+  padding: 40px 0;
   text-align: center;
 
   article {
+    background-image: url("../../static/images/paper.jpg");
+    background-size: cover;
+    border-radius: 2px;
     display: flex;
+    box-shadow: 0 0 2px 2px transparentize($black, 0.4);
     flex-direction: column;
+    margin: 0 auto;
+    max-width: 640px;
+    overflow: hidden;
     transition: transform ease-in-out 660ms;
+    width: 95%;
 
     .fr,
     .en {

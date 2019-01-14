@@ -76,8 +76,10 @@ class App extends Component {
         <DocumentTitle title={this.getTranslation("global.title")}>
           <div className={classnames("app", this.state.language)}>
             <header>
-              <Navigation />
-              <LanguageSwitcher />
+              <div class="contents">
+                <Navigation />
+                <LanguageSwitcher />
+              </div>
             </header>
 
             <Switch>
