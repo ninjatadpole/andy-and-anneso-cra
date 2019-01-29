@@ -1,0 +1,23 @@
+@import "../../styles/responsive.scss";
+@import "../../styles/mixins.scss";
+@import "../../styles/classes.scss";
+
+.tree {
+  position: absolute;
+
+  &.tree-1 {
+    @include image-ratio("../../static/images/tree-1.png", 230%);
+  }
+
+  &.tree-2 {
+    @include image-ratio("../../static/images/tree-2.png", 200%);
+  }
+
+  &.tree-3 {
+    @include image-ratio("../../static/images/tree-3.png", 139%);
+  }
+
+  &.tree-4 {
+    @include image-ratio("../../static/images/tree-4.png", 210%);
+  }
+}
