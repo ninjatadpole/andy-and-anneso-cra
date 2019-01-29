@@ -13,9 +13,10 @@
     content: "";
     display: block;
     height: 100%;
-    left: 0;
+    left: 50%;
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
   }
 }
