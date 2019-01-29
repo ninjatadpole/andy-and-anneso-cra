@@ -1,0 +1,50 @@
+@import "../../styles/mixins.scss";
+
+.leaves {
+  position: absolute;
+}
+
+.leaves-1 {
+  top: 50%;
+  width: 140%;
+
+  .blob-1 {
+    left: -5%;
+    transform: translateY(-105%);
+    width: 95%;
+  }
+
+  .blob-2 {
+    right: 0;
+    transform: translateY(-50%);
+    width: 95%;
+  }
+
+  .blob-3 {
+    left: 0;
+    transform: translateY(0);
+    width: 95%;
+  }
+}
+
+.leaves-2 {
+  position: absolute;
+  top: 50%;
+  width: 120%;
+
+  .blob-1 {
+    transform: translateY(-25%);
+    width: 90%;
+  }
+
+  .blob-2 {
+    left: 0;
+    transform: translateY(-110%);
+    width: 90%;
+  }
+
+  .blob-3 {
+    transform: translateY(-60%);
+    width: 90%;
+  }
+}
