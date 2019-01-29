@@ -1,9 +1,10 @@
 import React from "react";
+import classnames from "classnames";
 
 import "./blobs.scss";
 
 export default function Blobs(props) {
-  const blobColours = ["blue", "gold", "green", "purple"];
+  const blobColours = ["paper", "blue", "gold", "green", "purple"];
   const blobs = {};
 
   blobColours.forEach(colour => {
@@ -11,7 +12,7 @@ export default function Blobs(props) {
   });
 
   return (
-    <div className="blobs">
+    <div className={classnames("blobs", props.className)}>
       {blobColours.map(colour => {
         if (blobs[colour]) {
           return blobs[colour].map(version => {

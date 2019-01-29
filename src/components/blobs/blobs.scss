@@ -21,5 +21,16 @@ $blob-versions: 95% 97% 70%;
         @include image-ratio($url, $ratio);
       }
     }
+
+    .blob-#{$version}-paper {
+      @include image-ratio("../../static/images/paper.jpg", 100%);
+
+      border-radius: 50%;
+      overflow: hidden;
+
+      &::after {
+        background-size: auto;
+      }
+    }
   }
 }
