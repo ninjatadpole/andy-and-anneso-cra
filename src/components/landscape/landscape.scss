@@ -18,6 +18,7 @@
     bottom: -3px;
     left: 20%;
     position: absolute;
+    transition: all 330ms ease-in-out;
     width: 14%;
   }
 
@@ -27,6 +28,7 @@
     bottom: -2px;
     right: 22%;
     position: absolute;
+    transition: all 330ms ease-in-out;
     width: 7.5%;
   }
 
@@ -37,21 +39,22 @@
     right: $offset;
     opacity: 0.8;
     position: absolute;
+    transition: all 330ms ease-in-out;
     width: 30%;
 
     .blobs {
       position: absolute;
       top: 50%;
-      width: 120%;
+      width: 130%;
 
       .blob-1 {
-        right: 10%;
+        right: 5%;
         transform: translateY(-30%);
         width: 100%;
       }
 
       .blob-3 {
-        left: -20%;
+        left: -5%;
         transform: translateY(-20%);
         width: 90%;
       }
@@ -63,6 +66,7 @@
     height: 100%;
     left: $offset;
     position: absolute;
+    transition: all 330ms ease-in-out;
     width: 30%;
 
     .tree-1 {
@@ -117,19 +121,11 @@
     }
 
     .mountain {
-      right: $offset;
-      width: 20%;
+      right: 0;
+      width: 23%;
 
       .blobs {
         width: 150%;
-
-        .blob-1 {
-          right: 5%;
-        }
-
-        .blob-3 {
-          left: -15%;
-        }
       }
     }
 
@@ -148,7 +144,7 @@
 
     .home-copy.fr & {
       .mountain {
-        left: $offset;
+        left: 0;
         right: auto;
       }
 
@@ -175,11 +171,11 @@
     }
 
     .mountain {
-      right: $offset;
-      width: 20%;
+      right: 0;
+      width: 23%;
 
       .blobs {
-        width: 160%;
+        width: 150%;
       }
     }
 
@@ -198,7 +194,7 @@
 
     .home-copy.fr & {
       .mountain {
-        left: $offset;
+        left: 0;
         right: auto;
       }
 

@@ -44,6 +44,7 @@ export default function Landscape(props) {
           <div className="fairy-lights-3">
             <FairyLight className="light-1" gold={[1, 2, 3]} />
             <FairyLight className="light-2" gold={[1, 2, 3]} />
+            <FairyLight className="light-3" gold={[1, 2, 3]} />
           </div>
         </Tree>
       </div>

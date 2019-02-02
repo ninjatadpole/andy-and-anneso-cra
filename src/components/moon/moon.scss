@@ -14,6 +14,7 @@
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
+    transition: all 330ms ease-in-out;
     width: 25%;
 
     &::after {
@@ -70,7 +71,7 @@
 
   @include media(">=desktop") {
     .moon {
-      width: 23%;
+      width: 22%;
     }
   }
 }
