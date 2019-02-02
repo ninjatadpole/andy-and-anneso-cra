@@ -10,7 +10,7 @@
     background-size: cover;
     border-radius: 2px;
     display: flex;
-    box-shadow: 0 0 2px 2px transparentize($black, 0.4);
+    box-shadow: inset 0 0 4px transparentize($black, 0.4);
     flex-direction: column;
     margin: 0 auto;
     max-width: 640px;
@@ -20,11 +20,17 @@
 
     .fr,
     .en {
-      transition: filter 0ms 330ms;
+      transition: filter 0ms 330ms, opacity 660ms ease-in-out;
+    }
+
+    .en {
+      filter: blur(0);
+      opacity: 1;
     }
 
     .fr {
       filter: blur(1px);
+      opacity: 0.7;
       transform: rotate(180deg);
     }
   }
@@ -35,10 +41,12 @@
 
       .en {
         filter: blur(1px);
+        opacity: 0.7;
       }
 
       .fr {
         filter: blur(0);
+        opacity: 1;
       }
     }
   }
