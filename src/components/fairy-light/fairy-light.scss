@@ -1,0 +1,110 @@
+@import "../../styles/colours.scss";
+
+.fairy-lights {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.fairy-light {
+  position: absolute;
+  width: 6%;
+  z-index: 1;
+
+  .light,
+  .paper {
+    position: absolute;
+    width: 100%;
+  }
+
+  .paper .blob {
+    border: 1px solid transparentize($black, 0.7);
+    border-radius: 45%;
+  }
+
+  .blob {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+}
+
+.fairy-lights-1 {
+  .light-1 {
+    left: 0.5%;
+    top: 85%;
+  }
+  .light-2 {
+    left: 11.5%;
+    top: 84.5%;
+  }
+  .light-3 {
+    left: 21%;
+    top: 83.5%;
+  }
+  .light-4 {
+    left: 31%;
+    top: 82%;
+  }
+  .light-5 {
+    left: 40%;
+    top: 80%;
+  }
+  .light-6 {
+    left: 54%;
+    top: 82%;
+  }
+  .light-7 {
+    left: 62.5%;
+    top: 84.5%;
+  }
+  .light-8 {
+    left: 71%;
+    top: 86%;
+  }
+  .light-9 {
+    left: 80.5%;
+    top: 87%;
+  }
+  .light-10 {
+    left: 90%;
+    top: 88%;
+  }
+}
+
+.fairy-lights-2 {
+  .light-1 {
+    left: 0%;
+    top: 86.5%;
+  }
+  .light-2 {
+    left: 9.5%;
+    top: 85.75%;
+  }
+  .light-3 {
+    left: 19%;
+    top: 84.5%;
+  }
+  .light-4 {
+    left: 28%;
+    top: 83%;
+  }
+  .light-5 {
+    left: 36%;
+    top: 80%;
+  }
+}
+
+.fairy-lights-3 {
+  .light-1 {
+    left: 70%;
+    top: 82.5%;
+  }
+  .light-2 {
+    left: 60%;
+    top: 81%;
+  }
+}
