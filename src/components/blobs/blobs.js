@@ -4,7 +4,7 @@ import classnames from "classnames";
 import "./blobs.scss";
 
 export default function Blobs(props) {
-  const blobColours = ["paper", "blue", "gold", "green", "purple"];
+  const blobColours = ["paper", "gold", "green", "purple"];
   const blobs = {};
 
   blobColours.forEach(colour => {
