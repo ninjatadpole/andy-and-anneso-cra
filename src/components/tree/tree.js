@@ -7,7 +7,7 @@ export default function Tree(props) {
   const { className, children, version } = props;
 
   return (
-    <div className={classnames("tree", className, `tree-${version}`)}>
+    <div className={classnames("tree", className, `tree-v-${version}`)}>
       {children}
     </div>
   );

@@ -5,19 +5,19 @@
 .tree {
   position: absolute;
 
-  &.tree-1 {
+  &.tree-v-1 {
     @include image-ratio("../../static/images/tree-1.png", 230%);
   }
 
-  &.tree-2 {
+  &.tree-v-2 {
     @include image-ratio("../../static/images/tree-2.png", 200%);
   }
 
-  &.tree-3 {
+  &.tree-v-3 {
     @include image-ratio("../../static/images/tree-3.png", 139%);
   }
 
-  &.tree-4 {
+  &.tree-v-4 {
     @include image-ratio("../../static/images/tree-4.png", 210%);
   }
 }
