@@ -15,17 +15,36 @@
     font-size: 30px;
     font-weight: normal;
     margin: -30px 0 0;
-
-    .drop-cap {
-      font-size: 90px;
-      position: relative;
-      top: 12px;
-    }
   }
 
   .line-4 {
     margin-left: auto;
     margin-right: auto;
     width: 56%;
+  }
+
+  .drop-cap {
+    font-size: 90px;
+    position: relative;
+    top: 12px;
+
+    &::before {
+      background: url("../../static/images/blob-1-green.png") center no-repeat;
+      background-size: contain;
+      content: "";
+      display: block;
+      height: 150%;
+      left: -50%;
+      opacity: 0.7;
+      position: absolute;
+      top: -25%;
+      width: 180%;
+      z-index: -1;
+    }
+  }
+
+  &.fr .drop-cap::before {
+    background-image: url("../../static/images/blob-2-purple.png");
+    opacity: 1;
   }
 }

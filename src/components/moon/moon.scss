@@ -46,14 +46,19 @@
 
     .blob-2 {
       right: 0;
-      transform: translateY(-45%);
+      transform: translate(0%, -45%);
       width: 90%;
     }
 
-    .blob-3 {
+    .blob-1 {
       left: 0;
-      transform: translateY(-70%);
+      transform: translate(0%, -60%);
       width: 90%;
+    }
+    .blob-3 {
+      right: 0;
+      transform: translate(0%, -45%);
+      width: 100%;
     }
   }
 
