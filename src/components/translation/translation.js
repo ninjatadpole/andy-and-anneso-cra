@@ -8,18 +8,19 @@ import "./translation.scss";
 class Translation extends React.Component {
   render() {
     const {
-      ctx: { translate },
+      ctx: { currentLanguage, translate },
       id,
       language,
       tag
     } = this.props;
 
     const Wrapper = tag || "span";
+    const translationLanguage = language || currentLanguage;
 
     return (
       <Wrapper className={classnames("translation", this.props.className)}>
-        <span className={`lang lang-${language}`}>
-          {translate(id, language)}
+        <span className={`lang lang-${translationLanguage}`}>
+          {translate(id, translationLanguage)}
         </span>
         {this.props.children}
       </Wrapper>

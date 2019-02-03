@@ -23,10 +23,33 @@
       justify-content: space-between;
     }
   }
+}
 
-  .page {
-    height: calc(100vh - #{$header-height});
-    overflow-x: hidden;
-    z-index: 1;
+.page {
+  @extend .max-width;
+
+  height: calc(100vh - #{$header-height});
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.page:not(.page-home) {
+  background: transparentize($white, 0.2);
+
+  article {
+    padding: 40px 2.5%;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin: 0 0 2rem;
+    position: relative;
+    text-align: center;
+  }
+
+  .drop-cap {
+    font-size: 9rem;
+    font-weight: normal;
   }
 }

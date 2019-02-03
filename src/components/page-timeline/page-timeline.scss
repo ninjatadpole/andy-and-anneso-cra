@@ -2,7 +2,4 @@
 @import "../../styles/colours";
 
 .page-timeline {
-  @extend .max-width;
-
-  background: transparentize($white, 0.7);
 }

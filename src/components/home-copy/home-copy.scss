@@ -26,16 +26,10 @@
 
   .drop-cap {
     color: mix($black, $green, 60%);
-    font-size: 120px;
-    left: 12px;
-    position: relative;
-    top: 17px;
+    font-size: 110px;
+    margin-right: -1rem;
 
     &::before {
-      background: url("../../static/images/blob-1-green.png") center no-repeat;
-      background-size: contain;
-      content: "";
-      display: block;
       height: 150%;
       left: -50%;
       opacity: 0.7;
@@ -50,7 +44,6 @@
     color: mix($black, $purple, 60%);
 
     &::before {
-      background-image: url("../../static/images/blob-2-purple.png");
       opacity: 1;
     }
   }
