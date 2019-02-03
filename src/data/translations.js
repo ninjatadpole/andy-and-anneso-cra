@@ -1,5 +1,9 @@
+import React from "react";
+
 import homeTranslations from "./translations-home";
 import questionTranslations from "./translations-questions";
+
+import DropCap from "../components/drop-cap";
 
 export function translate(key, language) {
   const result = searchObj(key, STRINGS);
@@ -46,8 +50,8 @@ export const STRINGS = {
   home: homeTranslations,
   map: {
     title: {
-      en: "Map",
-      fr: "Carte"
+      en: <DropCap>Map</DropCap>,
+      fr: <DropCap>Carte</DropCap>
     },
     ceremony: {
       en: "Ceremony: Islington Town Hall",
@@ -81,6 +85,12 @@ export const STRINGS = {
     }
   },
   questions: questionTranslations,
+  schedule: {
+    title: {
+      en: <DropCap>Schedule</DropCap>,
+      fr: <DropCap>L'horaire</DropCap>
+    }
+  },
   switcher: {
     en: "In English",
     fr: "En Français"

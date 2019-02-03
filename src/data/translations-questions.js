@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import DropCap from "../components/drop-cap";
+
 const BEFORE_QUESTIONS = [
   {
     q: {
@@ -292,7 +294,10 @@ const OTHER_QUESTIONS = [
 ];
 
 export default {
-  title: { en: "Answers", fr: "Réponses" },
+  title: {
+    en: <DropCap>Answers</DropCap>,
+    fr: <DropCap>Réponses</DropCap>
+  },
   before: {
     en: "Before the day",
     fr: "Avant le jour",
