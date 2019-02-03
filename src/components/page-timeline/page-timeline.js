@@ -1,14 +1,19 @@
 import React from "react";
 import DocumentTitle from "react-document-title";
 
+import { WithCtx } from "../../utils/context";
 import Timeline from "../timeline";
 import Translation from "../translation";
 
 import "./page-timeline.scss";
 
-export default function PageTimeline(props) {
+function PageTimeline(props) {
+  const {
+    ctx: { translate }
+  } = props;
+
   return (
-    <DocumentTitle title="Wedding Schedule - Andy & Anne-So - August 24th 2019">
+    <DocumentTitle title={translate("schedule.metaTitle")}>
       <section className="page page-timeline">
         <article>
           <Translation tag="h1" id="schedule.title" />
@@ -18,3 +23,5 @@ export default function PageTimeline(props) {
     </DocumentTitle>
   );
 }
+
+export default WithCtx(PageTimeline);

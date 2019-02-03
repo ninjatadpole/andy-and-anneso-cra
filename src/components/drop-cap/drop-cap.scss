@@ -4,6 +4,7 @@
   margin-right: -0.5%;
   position: relative;
   vertical-align: middle;
+  z-index: 1;
 
   &::before {
     background: center no-repeat;
@@ -15,7 +16,7 @@
     position: absolute;
     top: -10%;
     width: 170%;
-    z-index: -1;
+    z-index: 1;
 
     .lang-en & {
       background-image: url("../../static/images/blob-1-green.png");
@@ -24,5 +25,15 @@
     .lang-fr & {
       background-image: url("../../static/images/blob-2-purple.png");
     }
+  }
+
+  .letter {
+    position: relative;
+    z-index: 2;
+  }
+
+  &-rest {
+    position: relative;
+    z-index: 2;
   }
 }

@@ -50,8 +50,12 @@ export const STRINGS = {
   home: homeTranslations,
   map: {
     title: {
-      en: <DropCap>Map</DropCap>,
-      fr: <DropCap>Carte</DropCap>
+      en: <DropCap>Maps</DropCap>,
+      fr: <DropCap>Les cartes</DropCap>
+    },
+    metaTitle: {
+      en: "Maps",
+      fr: "Les cartes"
     },
     ceremony: {
       en: "Ceremony: Islington Town Hall",
@@ -89,6 +93,10 @@ export const STRINGS = {
     title: {
       en: <DropCap>Schedule</DropCap>,
       fr: <DropCap>L'horaire</DropCap>
+    },
+    metaTitle: {
+      en: "Schedule",
+      fr: "L'horaire"
     }
   },
   switcher: {

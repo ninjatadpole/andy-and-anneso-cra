@@ -5,7 +5,7 @@ import { WithCtx } from "../../utils/context";
 import QuestionSection from "../question-section";
 import Translation from "../translation";
 
-import "./page-questions.scss";
+import "./page-answers.scss";
 
 function PageQuestions(props) {
   const {
@@ -13,8 +13,8 @@ function PageQuestions(props) {
   } = props;
 
   return (
-    <DocumentTitle title={translate("questions.title")}>
-      <section className="page page-questions">
+    <DocumentTitle title={translate("questions.metaTitle")}>
+      <section className="page page-answers">
         <article>
           <Translation tag="h1" id="questions.title" />
 

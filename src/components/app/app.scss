@@ -38,11 +38,13 @@
   background: transparentize($white, 0.2);
 
   article {
-    padding: 40px 2.5%;
+    line-height: 1.5;
+    padding: 40px 5%;
   }
 
   h1 {
     font-size: 3rem;
+    line-height: 1;
     margin: 0 0 2rem;
     position: relative;
     text-align: center;

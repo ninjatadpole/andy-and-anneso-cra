@@ -9,7 +9,7 @@ import LanguageSwitcher from "../language-switcher";
 import Navigation from "../navigation";
 import PageHome from "../page-home";
 import PageMap from "../page-map";
-import PageQuestions from "../page-questions";
+import PageQuestions from "../page-answers";
 import PageTimeline from "../page-timeline";
 
 import { translate } from "../../data/translations";

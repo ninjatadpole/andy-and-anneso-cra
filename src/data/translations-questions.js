@@ -22,21 +22,22 @@ const BEFORE_QUESTIONS = [
     a: {
       en: (
         <React.Fragment>
-          You can write to us at
+          You can write to us at:
           <br />
           <span className="address">
             Flat 1, 34 Gloucester Drive, London, N4 2LN
-          </span>
+          </span>{" "}
           or you can email us at{" "}
           <a href="mailto:hello@andyandanneso.com">hello@andyandanneso.com</a>
         </React.Fragment>
       ),
       fr: (
         <React.Fragment>
-          Vous pouvez nous écrire à<br />
+          Vous pouvez nous écrire à:
+          <br />
           <span className="address">
             Flat 1, 34 Gloucester Drive, Londres, N4 2LN
-          </span>
+          </span>{" "}
           ou vous pouvez nous envoyer un email à{" "}
           <a href="mailto:hello@andyandanneso.com">hello@andyandanneso.com</a>
         </React.Fragment>
@@ -297,6 +298,10 @@ export default {
   title: {
     en: <DropCap>Answers</DropCap>,
     fr: <DropCap>Réponses</DropCap>
+  },
+  metaTitle: {
+    en: "Answers",
+    fr: "Réponses"
   },
   before: {
     en: "Before the day",
