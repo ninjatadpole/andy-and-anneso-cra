@@ -14,7 +14,7 @@ function PageQuestions(props) {
 
   return (
     <DocumentTitle title={translate("questions.title")}>
-      <section className="page questions">
+      <section className="page page-questions">
         <article>
           <Translation tag="h1" id="questions.title" />
 

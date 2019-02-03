@@ -17,7 +17,7 @@ function PageHome(props) {
 
   return (
     <DocumentTitle title={translate("home.title")}>
-      <section className="page home">
+      <section className="page-home page">
         <article>
           <HomeCopy language="en">
             <Landscape>
