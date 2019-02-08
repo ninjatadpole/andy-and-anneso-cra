@@ -1,5 +1,7 @@
 import React from "react";
 
+import DropCap from "../components/drop-cap";
+
 export default {
   title: {
     en: "Andy & Anne-So - August 24th 2019",
@@ -10,18 +12,8 @@ export default {
     fr: "Venez rejoindre"
   },
   line2: {
-    en: (
-      <React.Fragment>
-        <span className="drop-cap">A</span>
-        ndy & Anne-So
-      </React.Fragment>
-    ),
-    fr: (
-      <React.Fragment>
-        <span className="drop-cap">A</span>
-        nne-So & Andy
-      </React.Fragment>
-    )
+    en: <DropCap>Andy & Anne-So</DropCap>,
+    fr: <DropCap>Anne-So & Andy</DropCap>
   },
   line3: {
     en: "to celebrate their wedding",

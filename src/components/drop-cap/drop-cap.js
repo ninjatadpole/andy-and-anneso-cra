@@ -1,7 +1,4 @@
 import React from "react";
-import classnames from "classnames";
-
-import Blobs from "../blobs";
 
 import "./drop-cap.scss";
 
