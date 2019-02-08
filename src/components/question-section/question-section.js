@@ -9,7 +9,7 @@ import "./question-section.scss";
 export default function QuestionSection(props) {
   const { dictionary, count } = props;
   return (
-    <div className={classnames("question-section", props.className)}>
+    <div {...props} className={classnames("question-section", props.className)}>
       <Translation tag="h2" id={dictionary} />
       <dl>
         {sizedArray(count).map((x, i) => {
