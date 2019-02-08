@@ -1,0 +1,117 @@
+@import "../../styles/classes.scss";
+@import "../../styles/responsive.scss";
+
+.scroll-nav {
+  left: 0;
+  position: fixed;
+  top: $header-height;
+  user-select: none;
+  width: 100px;
+  z-index: 5;
+
+  &.open {
+    .veil {
+      width: 100vw;
+      background: white;
+      height: 100vh;
+
+      &::after {
+        background: white;
+        border: 1px solid black;
+        border-radius: 4px;
+        content: "Close";
+        cursor: pointer;
+        display: block;
+        font-size: 2rem;
+        left: 10px;
+        line-height: 1.5;
+        position: relative;
+        text-align: center;
+        top: 10px;
+        width: 100px;
+      }
+    }
+
+    ul {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .veil {
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 200ms ease-in-out;
+    width: 0;
+  }
+
+  ul {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 2;
+    list-style: none;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    text-align: center;
+    transform: translate3d(-100%, 0, 0);
+    transition: all 200ms ease-in-out;
+    width: 100vw;
+
+    li {
+      margin-bottom: 0.75rem;
+
+      &.title {
+        font-size: 2.5rem;
+        text-decoration: underline;
+      }
+    }
+
+    button {
+      text-align: left;
+    }
+  }
+
+  .trigger {
+    background: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 2rem;
+    left: 10px;
+    line-height: 1.5;
+    position: relative;
+    text-align: center;
+    top: 10px;
+    width: 100%;
+  }
+
+  @include media(">=tablet") {
+    position: relative;
+    top: 0;
+    width: 160px;
+
+    ul {
+      border-right: 1px solid;
+      font-size: 1.8rem;
+      opacity: 1;
+      position: fixed;
+      text-align: left;
+      transform: translate3d(0, 0, 0);
+      width: 150px;
+
+      li {
+        padding-right: 10px;
+
+        &.title {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .trigger {
+      display: none;
+    }
+  }
+}
