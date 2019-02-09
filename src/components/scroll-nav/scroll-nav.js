@@ -1,6 +1,7 @@
 import React from "react";
 import classnames from "classnames";
 
+import Translation from "../translation";
 import scrollTo from "./scrollTo";
 
 import "./scroll-nav.scss";
@@ -37,14 +38,17 @@ class ScrollNav extends React.Component {
           open: this.state.open
         })}
       >
-        <button className="trigger" onClick={this.openMenu}>
-          Sections
-        </button>
-        <div className="veil" onClick={this.closeMenu} />
+        <Translation
+          className="trigger"
+          tag="button"
+          id="scrollNav.sections"
+          onClick={this.openMenu}
+        />
+        <div className="veil" onClick={this.closeMenu}>
+          <Translation tag="button" className="close" id="scrollNav.close" />
+        </div>
         <ul>
-          <li className="title">
-            <span>Sections</span>
-          </li>
+          <Translation className="title" tag="li" id="scrollNav.sections" />
           {items.map((item, i) => {
             return (
               <li key={`scroll-nav-${i}`}>

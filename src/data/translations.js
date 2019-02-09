@@ -99,6 +99,16 @@ export const STRINGS = {
       fr: "L'horaire"
     }
   },
+  scrollNav: {
+    close: {
+      en: "Close",
+      fr: "Fermez"
+    },
+    sections: {
+      en: "Sections",
+      fr: "Sections"
+    }
+  },
   switcher: {
     en: "In English",
     fr: "En Français"

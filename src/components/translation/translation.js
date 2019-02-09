@@ -18,7 +18,10 @@ class Translation extends React.Component {
     const translationLanguage = language || currentLanguage;
 
     return (
-      <Wrapper className={classnames("translation", this.props.className)}>
+      <Wrapper
+        {...this.props}
+        className={classnames("translation", this.props.className)}
+      >
         <span className={`lang lang-${translationLanguage}`}>
           {translate(id, translationLanguage)}
         </span>
