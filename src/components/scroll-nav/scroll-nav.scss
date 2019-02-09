@@ -1,4 +1,5 @@
 @import "../../styles/classes.scss";
+@import "../../styles/colours.scss";
 @import "../../styles/responsive.scss";
 
 .scroll-nav {
@@ -52,7 +53,7 @@
     font-weight: bold;
     line-height: 2;
     list-style: none;
-    margin: 0;
+    margin: 2rem 0 0;
     opacity: 0;
     padding: 0;
     text-align: center;
@@ -65,7 +66,22 @@
 
       &.title {
         font-size: 2.5rem;
-        text-decoration: underline;
+        margin-bottom: 2rem;
+
+        span {
+          position: relative;
+
+          &::after {
+            background: url("../../static/images/horizon.png") center no-repeat;
+            background-size: cover;
+            content: "";
+            height: 3px;
+            left: 0;
+            position: absolute;
+            top: 100%;
+            width: 100%;
+          }
+        }
       }
     }
 
@@ -75,8 +91,8 @@
   }
 
   .trigger {
-    background: white;
-    border: 1px solid black;
+    background: transparentize($white, 0.2);
+    border: 1px solid transparentize($black, 0.6);
     border-radius: 4px;
     font-size: 2rem;
     left: 10px;
@@ -90,11 +106,12 @@
   @include media(">=tablet") {
     position: relative;
     top: 0;
-    width: 160px;
+    width: 170px;
 
     ul {
       border-right: 1px solid;
       font-size: 1.8rem;
+      margin: 0;
       opacity: 1;
       position: fixed;
       text-align: left;

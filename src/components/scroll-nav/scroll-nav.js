@@ -42,7 +42,9 @@ class ScrollNav extends React.Component {
         </button>
         <div className="veil" onClick={this.closeMenu} />
         <ul>
-          <li className="title">Sections</li>
+          <li className="title">
+            <span>Sections</span>
+          </li>
           {items.map((item, i) => {
             return (
               <li key={`scroll-nav-${i}`}>
