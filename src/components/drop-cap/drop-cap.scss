@@ -1,6 +1,7 @@
 @import "../../styles/mixins.scss";
 
 .drop-cap {
+  font-weight: 300;
   margin-right: -0.5%;
   position: relative;
   vertical-align: middle;
@@ -28,13 +29,13 @@
   }
 
   .letter {
-    font-weight: 300;
     position: relative;
     z-index: 2;
   }
 
   &-rest {
     position: relative;
+    vertical-align: middle;
     z-index: 2;
   }
 }

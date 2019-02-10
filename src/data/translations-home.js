@@ -22,7 +22,7 @@ export default {
   line4: {
     en: (
       <React.Fragment>
-        Noon on the <span className="no-wrap">24th August 2019</span>
+        Noon, <span className="no-wrap">24th August 2019</span>
       </React.Fragment>
     ),
     fr: (
