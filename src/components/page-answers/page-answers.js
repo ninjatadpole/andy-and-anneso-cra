@@ -1,5 +1,4 @@
 import React from "react";
-import DocumentTitle from "react-document-title";
 
 import { WithCtx } from "../../utils/context";
 import Page from "../page";

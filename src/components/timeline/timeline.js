@@ -27,7 +27,7 @@ function SchoolIcon(props) {
 function Timeline(props) {
   const { section } = props;
 
-  if (section == "ceremony") {
+  if (section === "ceremony") {
     return (
       <VerticalTimeline className="timeline">
         <VerticalTimelineElement
@@ -99,7 +99,7 @@ function Timeline(props) {
         </VerticalTimelineElement>
       </VerticalTimeline>
     );
-  } else if (section == "party") {
+  } else if (section === "party") {
     return (
       <VerticalTimeline className="timeline">
         <VerticalTimelineElement

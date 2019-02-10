@@ -1,5 +1,4 @@
 import React from "react";
-import DocumentTitle from "react-document-title";
 
 import Map from "../map";
 import Page from "../page";

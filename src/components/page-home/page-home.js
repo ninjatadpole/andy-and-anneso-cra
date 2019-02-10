@@ -1,5 +1,4 @@
 import React from "react";
-import DocumentTitle from "react-document-title";
 
 import HomeCopy from "../home-copy";
 import Horizon from "../horizon";

@@ -1,5 +1,4 @@
 import React from "react";
-import DocumentTitle from "react-document-title";
 
 import Page from "../page";
 import ScrollNav from "../scroll-nav";
