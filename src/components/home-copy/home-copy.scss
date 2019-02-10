@@ -70,6 +70,10 @@
 
   .drop-cap-rest {
     padding-top: 6px;
+
+    &::after {
+      display: none;
+    }
   }
 
   &.fr .drop-cap {

@@ -1,6 +1,7 @@
 @import "../../styles/mixins.scss";
 
 .drop-cap {
+  font-size: 9rem;
   font-weight: 300;
   margin-right: -0.5%;
   position: relative;
@@ -37,5 +38,17 @@
     position: relative;
     vertical-align: middle;
     z-index: 2;
+
+    &::after {
+      background: url("../../static/images/horizon.png") center no-repeat;
+      background-size: cover;
+      content: "";
+      display: inline-block;
+      height: 3px;
+      left: 0;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+    }
   }
 }
