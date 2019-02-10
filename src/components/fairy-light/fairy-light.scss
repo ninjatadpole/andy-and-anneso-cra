@@ -13,14 +13,18 @@
   width: 6%;
   z-index: 1;
 
-  .light,
+  .light {
+    position: absolute;
+    width: 150%;
+  }
+
   .paper {
     position: absolute;
-    width: 100%;
+    width: 50%;
   }
 
   .paper .blob {
-    border: 1px solid transparentize($black, 0.7);
+    border: 1px solid transparentize($black, 0.3);
     border-radius: 45%;
   }
 
