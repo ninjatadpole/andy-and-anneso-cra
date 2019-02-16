@@ -11,7 +11,7 @@
 }
 
 .page:not(.page-home) {
-  background: transparentize($white, 0.2);
+  background: $pale-white;
 
   article {
     display: flex;
@@ -33,6 +33,14 @@
   h2 {
     font-size: 2.5rem;
     margin: 0 0 1.5rem;
+  }
+
+  .drop-cap {
+    margin-right: -0.15rem;
+  }
+
+  .drop-cap-rest {
+    letter-spacing: 0.2rem;
   }
 
   .content {
