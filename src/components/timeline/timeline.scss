@@ -1,5 +1,97 @@
 @import "../../styles/classes";
+@import "../../styles/responsive.scss";
+@import "../../styles/colours";
 
 .timeline {
   @extend .max-width;
+}
+
+.vertical-timeline::before {
+  background: $white;
+  border-radius: 2px;
+}
+
+.vertical-timeline-element-content {
+  background-color: $pale-white;
+  box-shadow: 0 3px 0 transparentize($white, 0.2);
+  padding-left: 86px;
+  padding-top: 0;
+
+  &::before {
+    border-right-color: $pale-white !important;
+  }
+
+  .vertical-timeline-element-date {
+    font-size: 1.8rem;
+    font-weight: 600;
+    left: 16px;
+    line-height: 40px;
+    padding: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    line-height: 40px;
+  }
+
+  h4 {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+
+  .map {
+    display: block;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  @include media(">=tablet") {
+    .vertical-timeline-element-date {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    h4 {
+      font-size: 1.8rem;
+    }
+
+    .map {
+      display: inline-block;
+      margin-left: 0.8rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px mix($white, #fff),
+    0 0 2px 4px transparentize($black, 0.8);
+
+  .icon {
+    display: block;
+    width: 100%;
+  }
+
+  .blobs,
+  .blob {
+    height: 100%;
+    width: 100%;
+  }
+
+  .ceremony-element &,
+  .party-element & {
+    background: url("../../static/images/paper.jpg") center no-repeat;
+  }
 }
