@@ -21,7 +21,7 @@ const BEFORE_QUESTIONS = [
     },
     a: {
       en: (
-        <React.Fragment>
+        <>
           You can write to us at:
           <br />
           <span className="address">
@@ -29,10 +29,10 @@ const BEFORE_QUESTIONS = [
           </span>{" "}
           or you can email us at{" "}
           <a href="mailto:hello@andyandanneso.com">hello@andyandanneso.com</a>
-        </React.Fragment>
+        </>
       ),
       fr: (
-        <React.Fragment>
+        <>
           Vous pouvez nous écrire à:
           <br />
           <span className="address">
@@ -40,7 +40,7 @@ const BEFORE_QUESTIONS = [
           </span>{" "}
           ou vous pouvez nous envoyer un email à{" "}
           <a href="mailto:hello@andyandanneso.com">hello@andyandanneso.com</a>
-        </React.Fragment>
+        </>
       )
     }
   },
@@ -51,14 +51,14 @@ const BEFORE_QUESTIONS = [
     },
     a: {
       en: (
-        <React.Fragment>
+        <>
           We can! <Link to="/map">Check out the maps here</Link>
-        </React.Fragment>
+        </>
       ),
       fr: (
-        <React.Fragment>
+        <>
           Nous pouvans! <Link to="/map">Découvrez les cartes ici</Link>
-        </React.Fragment>
+        </>
       )
     }
   }
@@ -72,16 +72,16 @@ const CEREMONY_QUESTIONS = [
     },
     a: {
       en: (
-        <React.Fragment>
+        <>
           The ceremony is being held at{" "}
           <span className="address">Islington Town Hall, London, N1 2UD</span>
-        </React.Fragment>
+        </>
       ),
       fr: (
-        <React.Fragment>
+        <>
           La cérémonie a lieu à{" "}
           <span className="address">Islington Town Hall, Londres, N1 2UD</span>
-        </React.Fragment>
+        </>
       )
     }
   },
@@ -153,16 +153,16 @@ const PARTY_QUESTIONS = [
     },
     a: {
       en: (
-        <React.Fragment>
+        <>
           The party is being held at{" "}
           <span className="address">The Depot, London, N7 9EF</span>
-        </React.Fragment>
+        </>
       ),
       fr: (
-        <React.Fragment>
+        <>
           La fête a lieu à{" "}
           <span className="address">The Depot, Londres, N7 9EF</span>
-        </React.Fragment>
+        </>
       )
     }
   },
@@ -220,7 +220,7 @@ const OTHER_QUESTIONS = [
     },
     a: {
       en: (
-        <React.Fragment>
+        <>
           There are three options:
           <br />
           <ol type="1">
@@ -231,10 +231,10 @@ const OTHER_QUESTIONS = [
               we realise.
             </li>
           </ol>
-        </React.Fragment>
+        </>
       ),
       fr: (
-        <React.Fragment>
+        <>
           Il y a trois options:
           <br />
           <ol type="1">
@@ -245,7 +245,7 @@ const OTHER_QUESTIONS = [
               réalisons.
             </li>
           </ol>
-        </React.Fragment>
+        </>
       )
     }
   },
@@ -280,15 +280,16 @@ const OTHER_QUESTIONS = [
     },
     a: {
       en: (
-        <React.Fragment>
+        <>
           Please email us with anything you need:{" "}
           <a href="mailto:hello@andyandanneso.com">hello@andyandanneso.com</a>
-        </React.Fragment>
+        </>
       ),
       fr: (
-        <React.Fragment>
-          S'il vous plaît écrivez-nous avec tout ce dont vous avez besoin
-        </React.Fragment>
+        <>
+          S'il vous plaît écrivez-nous avec tout ce dont vous avez besoin{" "}
+          <a href="mailto:hello@annesoetandy.com">hello@annesoetandy.com</a>
+        </>
       )
     }
   }

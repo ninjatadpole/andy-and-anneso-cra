@@ -21,14 +21,17 @@ export default {
   },
   line4: {
     en: (
-      <React.Fragment>
-        Noon, <span className="no-wrap">24th August 2019</span>
-      </React.Fragment>
+      <>
+        <span className="no-wrap">
+          24
+          <sup>th</sup> August 2019
+        </span>
+      </>
     ),
     fr: (
-      <React.Fragment>
-        le 24 Août 2019 <span className="no-wrap">à midi</span>
-      </React.Fragment>
+      <>
+        <span className="no-wrap">le 24 Août 2019</span>
+      </>
     )
   }
 };
