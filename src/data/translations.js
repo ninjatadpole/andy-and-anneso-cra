@@ -2,6 +2,7 @@ import React from "react";
 
 import homeTranslations from "./translations-home";
 import questionTranslations from "./translations-questions";
+import mapTranslations from "./translations-maps";
 
 import DropCap from "../components/drop-cap";
 
@@ -48,24 +49,7 @@ export const STRINGS = {
     }
   },
   home: homeTranslations,
-  map: {
-    title: {
-      en: <DropCap>Maps</DropCap>,
-      fr: <DropCap>Les cartes</DropCap>
-    },
-    metaTitle: {
-      en: "Maps",
-      fr: "Les cartes"
-    },
-    ceremony: {
-      en: "Ceremony: Islington Town Hall",
-      fr: "La Cérémonie: La Mairie"
-    },
-    party: {
-      en: "Celebration: The Depot",
-      fr: "La Fête: Le Depot"
-    }
-  },
+  map: mapTranslations,
   navigation: {
     menu: {
       en: "Menu",

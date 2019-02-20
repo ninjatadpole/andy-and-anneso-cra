@@ -3,7 +3,7 @@
 .wedding-map {
   border: 1px solid $black;
   border-radius: 6px;
-  margin: 0 auto 20px;
+  margin: 0 auto 6rem;
   overflow: hidden;
   position: relative;
   width: 80%;
@@ -21,6 +21,10 @@
     left: 0;
     position: absolute;
     top: 0;
+
+    h3 span {
+      display: block;
+    }
   }
 
   h4 {

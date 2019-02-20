@@ -5,21 +5,21 @@ import BaseMap from "./map";
 function VenuesMap(props) {
   const markers = [
     {
-      translationId: "map.ceremony",
+      translationId: "map.venues.ceremony",
       autoOpen: true,
       title: "",
       pos: {
-        lat: 51.5412773,
-        lng: -0.1023817
+        lat: 51.541785,
+        lng: -0.102833
       }
     },
     {
-      translationId: "map.party",
+      translationId: "map.venues.party",
       // autoOpen: true,
       title: "",
       pos: {
-        lat: 51.5413382,
-        lng: -0.1286466
+        lat: 51.548871,
+        lng: -0.121735
       }
     }
   ];
