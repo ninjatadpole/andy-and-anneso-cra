@@ -34,24 +34,28 @@ function PageQuestions(props) {
 
       <div className="content">
         <QuestionSection
+          className="section"
           id="questions-before"
           dictionary="questions.before"
           count="3"
         />
 
         <QuestionSection
+          className="section"
           id="questions-ceremony"
           dictionary="questions.ceremony"
           count="6"
         />
 
         <QuestionSection
+          className="section"
           id="questions-party"
           dictionary="questions.party"
           count="4"
         />
 
         <QuestionSection
+          className="section"
           id="questions-other"
           dictionary="questions.other"
           count="5"
