@@ -1,8 +1,30 @@
-.wedding-map {
-  position: relative;
+@import "../../styles/colours.scss";
 
-  h1 {
-    font-size: 14px;
+.wedding-map {
+  border: 1px solid $black;
+  border-radius: 6px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  position: relative;
+  width: 80%;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 0;
+    padding-top: 100%;
+    position: relative;
+    width: 100%;
+  }
+
+  .map-display {
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  h4 {
+    font-size: 1.4rem;
     font-weight: bold;
     margin: 0;
   }

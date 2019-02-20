@@ -1,11 +1,18 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { InfoWindow, Map, Marker, GoogleApiWrapper } from "google-maps-react";
 
 import { WithCtx } from "../../utils/context";
 
 import "./map.scss";
 
-class WeddingMap extends React.Component {
+class BaseMap extends React.Component {
+  static propTypes = {
+    ctx: PropTypes.object.isRequired,
+    google: PropTypes.object.isRequired,
+    markers: PropTypes.array
+  };
+
   state = {
     showingInfoWindow: false,
     activeMarker: {},
@@ -13,27 +20,6 @@ class WeddingMap extends React.Component {
     markers: [],
     refs: { map: null, marker: null }
   };
-
-  markers = [
-    {
-      translationId: "map.ceremony",
-      autoOpen: true,
-      title: "",
-      pos: {
-        lat: 51.5412773,
-        lng: -0.1023817
-      }
-    },
-    {
-      translationId: "map.party",
-      // autoOpen: true,
-      title: "",
-      pos: {
-        lat: 51.5413382,
-        lng: -0.1286466
-      }
-    }
-  ];
 
   bounds = null;
 
@@ -49,10 +35,12 @@ class WeddingMap extends React.Component {
   }
 
   addMarkers = () => {
+    const { google, markers } = this.props;
+
     const adjustment = 0;
-    this.bounds = new this.props.google.maps.LatLngBounds();
-    for (let i = 0; i < this.markers.length; i++) {
-      const { lat, lng } = this.markers[i].pos;
+    this.bounds = new google.maps.LatLngBounds();
+    for (let i = 0; i < markers.length; i++) {
+      const { lat, lng } = markers[i].pos;
       const greaterPos = { lat: lat + adjustment, lng: lng + adjustment };
       const lesserPos = { lat: lat - adjustment, lng: lng - adjustment };
       this.bounds.extend(lesserPos);
@@ -100,22 +88,23 @@ class WeddingMap extends React.Component {
 
   render() {
     const {
+      ctx: { translate, currentLanguage },
       google,
-      ctx: { translate, currentLanguage }
+      markers
     } = this.props;
 
     return (
       <div className="wedding-map">
         <Map
+          className="map-display"
           google={google}
-          style={{ width: "600px", height: "400px" }}
+          style={{ width: "100%", height: "100%" }}
           bounds={this.bounds}
-          initialCenter={this.markers[0].pos}
-          onReady={this.clickMarker}
+          initialCenter={markers.length ? markers[0].pos : null}
           fullscreenControl={false}
           mapTypeControl={false}
         >
-          {this.markers.map((marker, index) => {
+          {markers.map((marker, index) => {
             return (
               <Marker
                 name={translate(marker.translationId)}
@@ -135,7 +124,7 @@ class WeddingMap extends React.Component {
             disableAutoPan={true}
           >
             <div>
-              <h1>{this.state.selectedPlace.name}</h1>
+              <h3>{this.state.selectedPlace.name}</h3>
             </div>
           </InfoWindow>
         </Map>
@@ -147,4 +136,4 @@ class WeddingMap extends React.Component {
 export default GoogleApiWrapper({
   apiKey: process.env.REACT_APP_GOOGLE_MAPS,
   wrappingComponent: React.Fragment
-})(WithCtx(WeddingMap));
+})(WithCtx(BaseMap));

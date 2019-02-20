@@ -1,6 +1,11 @@
 import React from "react";
 
-import Map from "../map";
+import {
+  AccommodationFinsbury,
+  AccommodationCaledonian,
+  AccommodationKingsCross,
+  Venues
+} from "../map";
 import Page from "../page";
 import ScrollNav from "../scroll-nav";
 import Translation from "../translation";
@@ -28,11 +33,57 @@ function PageMap(props) {
 
       <div className="content">
         <h2 id="maps-venues">Venues</h2>
-        <Map />
+        <Venues />
         <h2 id="maps-accommodation">Accommodation</h2>
-        <Map />
-        <h3 id="maps-transport">Transport</h3>
-        <Map />
+        <h3>Near our house (Finsbury Park)</h3>
+        <p>
+          We live quite close to the Arsenal stadium, and our wedding will be
+          during the football season - depending on whether the team is playing
+          at home that week, accommodation may be harder to secure.
+        </p>
+        <ul>
+          <li>Pembury Hotel, £60-90</li>
+          <li>Best Western Highbury, £96</li>
+          <li>Queens Hotel, £86</li>
+          <li>Travelodge Finsbury Park, £69</li>
+          <li>Queens Drive, £80</li>
+          <li>United Lodge Hotel and Appartments, £94</li>
+          <li>Finsbury Serviced Appartments, £125</li>
+        </ul>
+        <AccommodationFinsbury />
+        <h3>Near the party (Caledonian Road)</h3>
+        <ul>
+          <li>Corner House Hotel, £70</li>
+          <li>Cuckoo N1, £90</li>
+          <li>Makedonia Hotel, £100</li>
+          <li>Camden Town Hotel, £85</li>
+          <li>Native Camden, £110</li>
+          <li>Caledonian Road Studio Flats</li>
+        </ul>
+        <AccommodationCaledonian />
+        <h3>Near Kings Cross (1 tube stop from the party)</h3>
+        <p>
+          Kings Cross is at the edge of central London and a trasport hub which
+          makes it both very convenient to stay and quite expensive
+        </p>
+        <ul>
+          <li>Hub by Premier Inn Kings Cross, £60-100</li>
+          <li>Travelodge Kings Cross, £90-130</li>
+          <li>Kings Cross Inn Hotel, £110</li>
+          <li>Travelodge Central Kings Cross, £110</li>
+        </ul>
+        <AccommodationKingsCross />
+        <h3>AirBnB</h3>
+        <p>
+          Air BnB properties are available at a range of prices and locations
+          across London.
+        </p>
+        <h3>Hostels</h3>
+        <p>
+          Camden is a youthful area of the city and hosts a couple of hostels.
+        </p>
+        <h2 id="maps-transport">Transport</h2>
+        Both Victoria and Piccadilly lines run all night on Saturday into Sunday
         https://tfl.gov.uk/plan-a-journey/
         https://itunes.apple.com/gb/app/citymapper-the-ultimate-transport-app/id469463298
         https://play.google.com/store/apps/details?id=com.citymapper.app.release&hl=en_GB
