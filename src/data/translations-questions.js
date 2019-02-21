@@ -39,7 +39,7 @@ const BEFORE_QUESTIONS = [
             Flat 1, 34 Gloucester Drive, Londres, N4 2LN
           </span>{" "}
           ou vous pouvez nous envoyer un email à{" "}
-          <a href="mailto:hello@andyandanneso.com">hello@andyandanneso.com</a>
+          <a href="mailto:hello@annesoetandy.com">hello@annesoetandy.com</a>
         </>
       )
     }
@@ -92,7 +92,7 @@ const CEREMONY_QUESTIONS = [
     },
     a: {
       en:
-        "The ceremony is at noon. Please arrive a little bit early so that you can wait nervously for the bride.",
+        "The ceremony is at noon. Please arrive at 11.30 so that you can wait nervously for the bride.",
       fr:
         "La cérémonie est à midi. S'il vous plaît arriver un peu tôt pour que vous pouvez attendre nerveusement pour la mariée."
     }
@@ -173,7 +173,7 @@ const PARTY_QUESTIONS = [
     },
     a: {
       en:
-        "If you're one of our party people and get to miss the speeches, come join in at any time after 6. We'll celebrate til late.",
+        "If you're one of our party people, come join in at any time after 7. We'll celebrate til late.",
       fr:
         "Si vous faites partie de notre parti et manquez les discours, venez vous joindre à tout moment après 6 heures. Nous célébrerons jusqu'à tard."
     }
@@ -184,7 +184,7 @@ const PARTY_QUESTIONS = [
       fr: "Y aura-t-il de la danse?"
     },
     a: {
-      en: "Hell yes! There will be silly games, too.",
+      en: "Hell yes! Put your dancing shoes on!",
       fr: "Putain, oui! Il y aura aussi des jeux stupides."
     }
   },
@@ -194,7 +194,7 @@ const PARTY_QUESTIONS = [
       fr: "Y aura-t-il de la nourriture?"
     },
     a: {
-      en: "There will! Pizzas and buffet, cheese and pickles.",
+      en: "There will!",
       fr: "Il y aura! Pizzas et buffet, fromage et cornichons."
     }
   }
@@ -225,7 +225,17 @@ const OTHER_QUESTIONS = [
           <br />
           <ol type="1">
             <li>No, please, just you</li>
-            <li>You could donate a gift amount to St Mungos</li>
+            <li>
+              You could donate a gift amount to St Mungos, a charity who helps
+              homeless people to move away from the streets.{" "}
+              <a
+                href="https://gofundme.com/anneso-amp-andy039s-wedding-campaign-for-st-mungo039s"
+                target="mungos"
+              >
+                Donate and find out more here
+              </a>
+              .
+            </li>
             <li>
               We will be going on honeymoon, and it will be more expensive than
               we realise.
@@ -257,7 +267,34 @@ const OTHER_QUESTIONS = [
         "Y a-t-il des endroits que vous recommanderiez de visiter pendant que je suis à ville?"
     },
     a: {
-      en: "?",
+      en: (
+        <>
+          You can check out some of{" "}
+          <a
+            href="https://www.thecrazytourist.com/25-best-things-to-do-in-london/"
+            target="attractions"
+          >
+            the best attractions London has to offer
+          </a>
+          .<br />
+          Some of our favourite places in London include:
+          <ol>
+            <li>Hampstead Heath</li>
+            <li>
+              The Curve garden, Cafe Andu (Ethiopian restaurant) and Cafe Oto in
+              Dalston.
+            </li>
+            <li>Shoreditch and Brick Lane Market</li>
+            <li>The Wonderlab at the Science Museum (great for kids).</li>
+            <li>Tate Modern</li>
+          </ol>
+          Day trips suggestions include: Oxford, Cambridge, Camber Sands and
+          Rye, Brighton
+          <br />2 days+ trips from London include: Bath and Stonehenge,
+          Cotswolds, York, Lake District, Cornwall, Canterbury,
+          Stratford-Upon-Avon
+        </>
+      ),
       fr: "?"
     }
   },
@@ -297,12 +334,12 @@ const OTHER_QUESTIONS = [
 
 export default {
   title: {
-    en: <DropCap>Answers</DropCap>,
-    fr: <DropCap>Réponses</DropCap>
+    en: <DropCap>Other Info</DropCap>,
+    fr: <DropCap>Autres infos</DropCap>
   },
   metaTitle: {
-    en: "Answers",
-    fr: "Réponses"
+    en: "Other Info",
+    fr: "Autres infos"
   },
   before: {
     en: "Before the day",

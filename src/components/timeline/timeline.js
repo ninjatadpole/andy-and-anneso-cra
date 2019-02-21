@@ -6,6 +6,7 @@ import {
 import classnames from "classnames";
 
 import Blobs from "../blobs";
+import Translation from "../translation";
 
 import "react-vertical-timeline-component/style.min.css";
 import "./timeline.scss";
@@ -22,7 +23,7 @@ function CeremonyIcon(props) {
   return (
     <Icon className="ceremony">
       {" "}
-      <Blobs gold={[1, 2, 3]} />
+      <Blobs green={[1, 2, 3]} />
     </Icon>
   );
 }
@@ -47,84 +48,58 @@ function Timeline(props) {
           icon={<CeremonyIcon />}
           position="left"
         >
-          <h3>Guests arrive</h3>
-          <h4>
-            Islington Town Hall, Islington{" "}
-            <span className="map">
-              (
-              <a href="https://goo.gl/maps/NXHVM4mU77F2" target="town-hall">
-                map
-              </a>
-              )
-            </span>
-          </h4>
-          <p>
-            Family and full-day guests are requested to arrive in good time.
-          </p>
+          <Translation tag="h3" id="schedule.ceremony.arrival.title" />
+          <Translation tag="h4" id="schedule.ceremony.arrival.subtitle" />
+          <Translation tag="p" id="schedule.ceremony.arrival.note" />
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="ceremony-element"
           date="12:00"
           icon={<CeremonyIcon />}
         >
-          <h3>Ceremony</h3>
+          <Translation tag="h3" id="schedule.ceremony.ceremony.title" />
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="ceremony-element"
           date="12:50"
           icon={<CeremonyIcon />}
         >
-          <h3>Blessing</h3>
-          <h4>Islington public gardens</h4>
-          <p>The gardens are a short (5 minute) walk from the ceremony</p>
+          <Translation tag="h3" id="schedule.ceremony.blessing.title" />
+          <Translation tag="h4" id="schedule.ceremony.blessing.subtitle" />
+          <Translation tag="p" id="schedule.ceremony.blessing.note" />
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="ceremony-element"
           date="13:00"
           icon={<CeremonyIcon />}
         >
-          <h3>Photographs</h3>
-          <p>Refreshments will be provided</p>
+          <Translation tag="h3" id="schedule.ceremony.photos.title" />
+          <Translation tag="h4" id="schedule.ceremony.photos.subtitle" />
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="ceremony-element"
           date="13:30"
           icon={<CeremonyIcon />}
         >
-          <h3>Transport to reception</h3>
-          <p>
-            All guests will be provided with traditional journeys to the
-            reception.
-          </p>
+          <Translation tag="h3" id="schedule.ceremony.transport.title" />
+          <Translation tag="p" id="schedule.ceremony.transport.note" />
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="ceremony-element"
           date="14:00"
           icon={<CeremonyIcon />}
         >
-          <h3>Vin d'honneur</h3>
-          <h4>
-            The Depot, Caledonian Road{" "}
-            <span className="map">
-              (
-              <a href="https://goo.gl/maps/RD1xETHPyYJ2" target="party">
-                map
-              </a>
-              )
-            </span>
-          </h4>
-          <p>Cannapés and bubbles and greetings</p>
+          <Translation tag="h3" id="schedule.ceremony.welcome.title" />
+          <Translation tag="h4" id="schedule.ceremony.welcome.subtitle" />
+          <Translation tag="p" id="schedule.ceremony.welcome.note" />
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="ceremony-element"
           date="15:00"
           icon={<CeremonyIcon />}
         >
-          <h3>Lunch</h3>
-          <p>
-            We will contact our full-day guests for menu preferences before the
-            day
-          </p>
+          <Translation tag="h3" id="schedule.ceremony.lunch.title" />
+          <Translation tag="p" id="schedule.ceremony.lunch.note" />
         </VerticalTimelineElement>
       </VerticalTimeline>
     );
@@ -136,34 +111,24 @@ function Timeline(props) {
           date="19:00"
           icon={<PartyIcon />}
         >
-          <h3>Party</h3>
-          <h4>
-            The Depot, Caledonian Road{" "}
-            <span className="map">
-              (
-              <a href="https://goo.gl/maps/RD1xETHPyYJ2" target="party">
-                map
-              </a>
-              )
-            </span>
-          </h4>
-          <p>
-            All guests are invited to join for music and games and celebration
-          </p>
+          <Translation tag="h3" id="schedule.party.party.title" />
+          <Translation tag="h4" id="schedule.party.party.subtitle" />
+          <Translation tag="p" id="schedule.party.party.note" />
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="party-element"
           date="21:00"
           icon={<PartyIcon />}
         >
-          <h3>Evening buffet</h3>
+          <Translation tag="h3" id="schedule.party.buffet.title" />
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="party-element"
           date="02:00"
           icon={<PartyIcon />}
         >
-          <h3>(Hackney) Carriages</h3>
+          <Translation tag="h3" id="schedule.party.carriages.title" />
+          <Translation tag="h4" id="schedule.party.carriages.subtitle" />
         </VerticalTimelineElement>
       </VerticalTimeline>
     );

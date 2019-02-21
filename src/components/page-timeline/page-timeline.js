@@ -27,11 +27,11 @@ function PageTimeline(props) {
 
       <div className="content">
         <div className="section" id="timeline-ceremony">
-          <h2>Ceremony</h2>
+          <Translation tag="h2" id="schedule.ceremony.title" />
           <Timeline section="ceremony" />
         </div>
         <div className="section" id="timeline-party">
-          <h2>Party</h2>
+          <Translation tag="h2" id="schedule.party.title" />
           <Timeline section="party" />
         </div>
       </div>

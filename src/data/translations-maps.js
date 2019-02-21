@@ -4,44 +4,89 @@ import DropCap from "../components/drop-cap";
 
 export default {
   title: {
-    en: <DropCap>Maps</DropCap>,
-    fr: <DropCap>Les cartes</DropCap>
+    en: <DropCap>Locations</DropCap>,
+    fr: <DropCap>Locations</DropCap>
   },
   metaTitle: {
-    en: "Maps",
-    fr: "Les cartes"
+    en: "Locations",
+    fr: "Locations"
   },
-  accommodationTitle: "Accommodation",
+  accommodationTitle: {
+    en: "Accommodation",
+    fr: "Hébergement"
+  },
   accommodationAirBnbTitle: "AirBnB",
-  accommodationAirBnbDesc: (
-    <>
-      AirBnB properties are available at a range of prices and locations across
-      London.
-    </>
-  ),
-  accommodationCaledonianTitle: "Near the party (Caledonian Road)",
-  accommodationFinsburyTitle: "Near our house (Finsbury Park)",
-  accommodationFinsburyDesc: (
-    <>
-      We live quite close to the Arsenal stadium, and our wedding will be during
-      the football season - depending on whether the team is playing at home
-      that week, accommodation may be harder to secure.
-    </>
-  ),
-  accommodationHostelTitle: "Hostels",
-  accommodationHostelDesc: (
-    <>
-      Camden (near the party) is a youthful area of the city and hosts a couple
-      of hostels.
-    </>
-  ),
-  accommodationKingsCrossTitle: "Near Kings Cross (1 tube stop from the party)",
-  accommodationKingsCrossDesc: (
-    <>
-      Kings Cross is at the edge of central London and a trasport hub which
-      makes it both very convenient to stay and quite expensive.
-    </>
-  ),
+  accommodationAirBnbDesc: {
+    en: (
+      <>
+        AirBnB properties are available at a range of prices and locations
+        across London.
+      </>
+    ),
+    fr: (
+      <>
+        Airbnb porpose, sur tout Londres, des locations de chambres, studios,
+        appartments et maisons chez l'habitant à louer a partir de 40£ par nuit
+      </>
+    )
+  },
+  accommodationCaledonianTitle: {
+    en: "Near the party (Caledonian Road)",
+    fr: "Près de la réception (Caledonian Road)"
+  },
+  accommodationFinsburyTitle: {
+    en: "Near our house (Finsbury Park)",
+    fr: "Près de chez nous (Finsbury Park)"
+  },
+  accommodationFinsburyDesc: {
+    en: (
+      <>
+        We live quite close to the Arsenal stadium, and our wedding will be
+        during the football season - depending on whether the team is playing at
+        home that week, accommodation may be harder to secure.
+      </>
+    ),
+    fr: (
+      <>
+        Nous vivons pas très loin du stade Arsenal and notre mariage se
+        déroulera durant la saison. Réservez donc le plus tôt possible.
+      </>
+    )
+  },
+  accommodationHostelTitle: {
+    en: "Hostels",
+    fr: "Auberges de jeunesse"
+  },
+  accommodationHostelDesc: {
+    en: (
+      <>
+        Camden (near the party) is a youthful area of the city and hosts a
+        couple of hostels.
+      </>
+    ),
+    fr: (
+      <>Vous pouvez trouver des auberges de jeunesse à Camden et Kings Cross.</>
+    )
+  },
+  accommodationKingsCrossTitle: {
+    en: "Near Kings Cross (1 tube stop from the party)",
+    fr:
+      "Près de Kings Cross (1 arrêt de métro de la réception et à côté de l'Eurostar)"
+  },
+  accommodationKingsCrossDesc: {
+    en: (
+      <>
+        Kings Cross is at the edge of central London and a trasport hub which
+        makes it both very convenient to stay and quite expensive.
+      </>
+    ),
+    fr: (
+      <>
+        Kings Cross n'est pas très loin du centre et est très bien deservi par
+        plusieurs lignes de métro, cependant un peu plus cher.
+      </>
+    )
+  },
   accommodation: {
     bestWesternHighbury: (
       <>
@@ -181,7 +226,10 @@ export default {
       celebrate for longer.
     </>
   ),
-  venueTitle: "Venues",
+  venueTitle: {
+    en: "Venues",
+    fr: "Lieux"
+  },
   venues: {
     ceremony: {
       en: (
@@ -194,7 +242,7 @@ export default {
       fr: (
         <>
           <span>La Cérémonie:</span>
-          <span>La Mairie,</span>
+          <span>La Mairie, Islington,</span>
           <span>N1 2UD</span>
         </>
       )

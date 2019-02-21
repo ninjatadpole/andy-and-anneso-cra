@@ -1,8 +1,9 @@
 import React from "react";
 
 import homeTranslations from "./translations-home";
-import questionTranslations from "./translations-questions";
 import mapTranslations from "./translations-maps";
+import questionTranslations from "./translations-questions";
+import scheduleTranslations from "./translations-schedule";
 
 import DropCap from "../components/drop-cap";
 
@@ -60,29 +61,20 @@ export const STRINGS = {
       fr: "L'accueil"
     },
     maps: {
-      en: "Maps",
-      fr: "Les Cartes"
+      en: "Locations",
+      fr: "Locations"
     },
     timeline: {
-      en: "Schedule",
-      fr: "L'horaire"
+      en: "Programme",
+      fr: "Le Programme"
     },
     answers: {
-      en: "Answers",
-      fr: "Réponses"
+      en: "Other Info",
+      fr: "Autres Infos"
     }
   },
   questions: questionTranslations,
-  schedule: {
-    title: {
-      en: <DropCap>Schedule</DropCap>,
-      fr: <DropCap>L'horaire</DropCap>
-    },
-    metaTitle: {
-      en: "Schedule",
-      fr: "L'horaire"
-    }
-  },
+  schedule: scheduleTranslations,
   scrollNav: {
     close: {
       en: "Close",
