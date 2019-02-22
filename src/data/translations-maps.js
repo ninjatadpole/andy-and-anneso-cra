@@ -103,7 +103,7 @@ export default {
     comfortInnKingsCross: (
       <>
         <span>Comfort Inn</span>
-        <span>Kings Cross</span>
+        <span>Kings Cross,</span>
         <span>£95</span>
       </>
     ),

@@ -16,11 +16,11 @@ function PageTimeline(props) {
         items={[
           {
             link: "#timeline-ceremony",
-            text: "Ceremony"
+            textId: "schedule.ceremony.title"
           },
           {
             link: "#timeline-party",
-            text: "Party"
+            textId: "schedule.party.title"
           }
         ]}
       />

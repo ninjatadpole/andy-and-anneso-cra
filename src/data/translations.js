@@ -1,11 +1,7 @@
-import React from "react";
-
 import homeTranslations from "./translations-home";
 import mapTranslations from "./translations-maps";
 import questionTranslations from "./translations-questions";
 import scheduleTranslations from "./translations-schedule";
-
-import DropCap from "../components/drop-cap";
 
 export function translate(key, language) {
   const result = searchObj(key, STRINGS);

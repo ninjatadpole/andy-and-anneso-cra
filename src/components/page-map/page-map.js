@@ -21,13 +21,13 @@ function PageMap(props) {
         items={[
           {
             link: "#maps-venues",
-            text: "Venues"
+            textId: "map.venueTitle"
           },
           {
             link: "#maps-accommodation",
-            text: "Accommodation"
+            textId: "map.accommodationTitle"
           },
-          { link: "#maps-transport", text: "Transport" }
+          { link: "#maps-transport", textId: "map.transportTitle" }
         ]}
       />
 

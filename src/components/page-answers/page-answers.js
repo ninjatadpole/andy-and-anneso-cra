@@ -21,14 +21,14 @@ function PageQuestions(props) {
         items={[
           {
             link: "#questions-before",
-            text: translate("questions.before")
+            textId: "questions.before"
           },
           {
             link: "#questions-ceremony",
-            text: translate("questions.ceremony")
+            textId: "questions.ceremony"
           },
-          { link: "#questions-party", text: translate("questions.party") },
-          { link: "#questions-other", text: translate("questions.other") }
+          { link: "#questions-party", textId: "questions.party" },
+          { link: "#questions-other", textId: "questions.other" }
         ]}
       />
 

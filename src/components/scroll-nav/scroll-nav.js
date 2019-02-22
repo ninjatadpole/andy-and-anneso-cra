@@ -53,7 +53,7 @@ class ScrollNav extends React.Component {
             return (
               <li key={`scroll-nav-${i}`}>
                 <button href={item.link} onClick={this.scrollToItem}>
-                  {item.text}
+                  <Translation id={item.textId} />
                 </button>
               </li>
             );
