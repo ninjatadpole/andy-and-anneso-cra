@@ -198,34 +198,77 @@ export default {
       </>
     )
   },
-  transportTitle: "Transport",
-  transportBetweenTitle: "Between ceremony and party",
-  transportBetweenDesc: (
-    <>
-      All guests at the ceremony will have their transport to the party arranged
-      for them.
-    </>
-  ),
-  transportNavigatingTitle: "Finding your way",
-  transportNavigatingDesc: (
-    <>
-      Modern life makes navigating London cheap and easy. You can use the{" "}
-      <a href="https://tfl.gov.uk/plan-a-journey/" target="tfl">
-        official London transport journey planner
-      </a>
-      , or search for "Citymapper app" on your smart phone to find your way by
-      public transport.
-    </>
-  ),
-  transportTubeTitle: "Underground/The Tube",
-  transportTubeDesc: (
-    <>
-      The area of Loondon around the ceremony and party are served by the
-      Victoria (light blue) and Piccadilly (dark blue) lines. These two tube
-      lines run all day and night during the weekend, so you can stay and
-      celebrate for longer.
-    </>
-  ),
+  transportTitle: {
+    en: "Transport",
+    fr: "Se déplacer"
+  },
+  transportBetweenTitle: {
+    en: "Between ceremony and party",
+    fr: "Entre la cérémonie et la réception"
+  },
+  transportBetweenDesc: {
+    en: (
+      <>
+        All guests at the ceremony will have their transport to the party
+        arranged for them.
+      </>
+    ),
+    fr: <>Nous organiserons un transport pour tous les invités.</>
+  },
+  transportNavigatingTitle: {
+    en: "Finding your way",
+    fr: "Trouvez votre itinéraire"
+  },
+  transportNavigatingDesc: {
+    en: (
+      <>
+        Modern life makes navigating London easy. You can use the{" "}
+        <a href="https://tfl.gov.uk/plan-a-journey/" target="tfl">
+          official London transport journey planner
+        </a>
+        , or search for "Citymapper app" on your smart phone to find your way by
+        public transport.{" "}
+        <a href="mailto:hello@andyandanneso.com">
+          Contact us with any questions
+        </a>
+        .
+      </>
+    ),
+    fr: (
+      <>
+        en vous aidant du site{" "}
+        <a href="https://tfl.gov.uk/plan-a-journey/" target="tfl">
+          official London transport journey planner
+        </a>
+        , ou en utilisant l'application "Citymapper" sur votre smart phone.{" "}
+        <a href="mailto:hello@annesoetandy.com">
+          Contactez-nous pour toute question.
+        </a>
+      </>
+    )
+  },
+  transportTubeTitle: {
+    en: "Underground/The Tube",
+    fr: "Le métro (The tube)"
+  },
+  transportTubeDesc: {
+    en: (
+      <>
+        The area of London around the ceremony and party are served by the
+        Victoria (light blue) and Piccadilly (dark blue) lines. These two tube
+        lines run all day and night during the weekend, so you can stay and
+        celebrate for longer.
+      </>
+    ),
+    fr: (
+      <>
+        Les quartiers de Londres où se déroulent la cérémonie et la réception
+        sont désservis par les lignes Victoria (ligne bleu clair) et Piccadilly
+        (ligne bleu foncé). Ces lignes opèrent toute la journée et nuit durant
+        le weekend.
+      </>
+    )
+  },
   venueTitle: {
     en: "Venues",
     fr: "Lieux"
