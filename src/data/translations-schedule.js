@@ -36,7 +36,7 @@ export default {
         ),
         fr: (
           <>
-            La Mairie, Islington{" "}
+            Islington Town Hall (Mairie){" "}
             <span className="map">
               (
               <a href="https://goo.gl/maps/NXHVM4mU77F2" target="town-hall">
@@ -69,8 +69,8 @@ export default {
         fr: "Les jardins publics d'Islington"
       },
       note: {
-        en: "The gardens are a short (5 minute) walk from the ceremony",
-        fr: "Les jardins se trouvent à 5 mins a pied du la Mairie."
+        en: "The gardens are a short (5 minute) walk from the ceremony.",
+        fr: "Les jardins se trouvent à 5 mins à pied de la Mairie."
       }
     },
     photos: {
@@ -91,7 +91,7 @@ export default {
       note: {
         en:
           "All guests will be provided with traditional journeys to the reception.",
-        fr: "Un transport sera organisé"
+        fr: "Un transport sera organisé."
       }
     },
     welcome: {
@@ -123,8 +123,8 @@ export default {
         )
       },
       note: {
-        en: "Cannapés bubbles and greetings.",
-        fr: "Canapés et bulles"
+        en: "Cannapés, bubbles and greetings.",
+        fr: "Canapés et bulles."
       }
     },
     lunch: {
@@ -136,7 +136,7 @@ export default {
         en:
           "We will contact our full-day guests for menu preferences before the day.",
         fr:
-          "Nous contacterons, avant le marigae, les invités concernant le menu."
+          "Nous contacterons, avant le mariage, les invités concernant le menu."
       }
     }
   },
@@ -179,7 +179,7 @@ export default {
       note: {
         en:
           "All guests are invited to join us for music, games and celebration.",
-        fr: ""
+        fr: "Tout les invités nous rejoignent pour célébrer."
       }
     },
     buffet: {

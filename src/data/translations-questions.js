@@ -7,17 +7,17 @@ const BEFORE_QUESTIONS = [
   {
     q: {
       en: "By when should I RSVP?",
-      fr: "Quand devrais-je confirmer ma présence?"
+      fr: "Quand devrai-je confirmer ma présence?"
     },
     a: {
       en: `Please let us know who is coming by the end of April. We will then let you know about menus, ask for your preferences and so on.`,
-      fr: `S'il vous plaît laissez-nous savoir qui vient d'ici la fin avril. Nous allons alors vous informer sur les menus, demander vos préférences et ainsi de suite.`
+      fr: `Repondez nous svp avant la fin avril. Nous vous informerons ensuite sur les menus et vous demanderons vos préférences.`
     }
   },
   {
     q: {
       en: `Should I send my RSVP back in the post or can I reply online?`,
-      fr: `Devrais-je renvoyer ma réponse par la poste ou puis-je répondre en ligne?`
+      fr: `Devrai-je renvoyer ma réponse par la poste ou par email?`
     },
     a: {
       en: (
@@ -57,7 +57,7 @@ const BEFORE_QUESTIONS = [
       ),
       fr: (
         <>
-          Nous pouvans! <Link to="/map">Découvrez les cartes ici</Link>
+          Nous pouvons! <Link to="/map">Découvrez les cartes ici</Link>
         </>
       )
     }
@@ -92,9 +92,9 @@ const CEREMONY_QUESTIONS = [
     },
     a: {
       en:
-        "The ceremony is at noon. Please arrive at 11.30 so that you can wait nervously for the bride.",
+        "The ceremony is at noon. Please arrive around 11.30 so that you can wait nervously for the bride.",
       fr:
-        "La cérémonie est à midi. S'il vous plaît arriver un peu tôt pour que vous pouvez attendre nerveusement pour la mariée."
+        "La cérémonie est à midi. Arrivez, s'il vous plait, vers 11h30 pour attendre nerveusement la mariée."
     }
   },
   {
@@ -106,7 +106,7 @@ const CEREMONY_QUESTIONS = [
       en:
         "You can, but they won’t be allowed into the ceremony and would need to be secured outside the Town Hall.",
       fr:
-        "Vous pouvez le faire, mais ils ne seront pas autorisés à assister à la cérémonie et devront être sécurisés à l’extérieur de la mairie."
+        "Vous pouvez les amener, mais ils ne seront pas autorisés à assister à la cérémonie et devront être sécurisés à l’extérieur de la mairie."
     }
   },
   {
@@ -116,7 +116,7 @@ const CEREMONY_QUESTIONS = [
     },
     a: {
       en: "Of course! Just let us when you respond to the invite.",
-      fr: "Bien sûr! Laissez-nous juste quand vous répondez à l'invitation."
+      fr: "Bien sûr! Faites le nous savoir quand nous repondrez à l'invitation."
     }
   },
   {
@@ -126,9 +126,9 @@ const CEREMONY_QUESTIONS = [
     },
     a: {
       en:
-        "Wear whatever you want. Feel free to bring funky props for the party!",
+        "No, please wear whatever you want. Feel free to bring funky props for the party!",
       fr:
-        "Portez ce que vous voulez. N'hésitez pas à apporter des accessoires géniaux pour la fête!"
+        "Non, portez ce que vous voulez. N'hésitez pas à amener des accesoires de fête pour la soirée!"
     }
   },
   {
@@ -139,8 +139,7 @@ const CEREMONY_QUESTIONS = [
     a: {
       en:
         "There will. Just stay with the group and everything will be taken care of.",
-      fr:
-        "Il y aura. Il suffit de rester avec le groupe et tout sera pris en charge."
+      fr: "Oui. Restez avec le groupe et tout sera organisé."
     }
   }
 ];
@@ -169,13 +168,12 @@ const PARTY_QUESTIONS = [
   {
     q: {
       en: "When should I arrive if I'm coming to the party?",
-      fr: "Quand devrais-je arriver si je viens à la fête?"
+      fr: "Quand devrai-je arriver si je suis invité(e) à la soiree dansante?"
     },
     a: {
       en:
         "If you're one of our party people, come join in at any time after 7. We'll celebrate til late.",
-      fr:
-        "Si vous faites partie de notre parti et manquez les discours, venez vous joindre à tout moment après 6 heures. Nous célébrerons jusqu'à tard."
+      fr: "Rejoignez nous dès 19h"
     }
   },
   {
@@ -185,17 +183,17 @@ const PARTY_QUESTIONS = [
     },
     a: {
       en: "Hell yes! Put your dancing shoes on!",
-      fr: "Putain, oui! Il y aura aussi des jeux stupides."
+      fr: "Oui, et nous avons hâte de voir vos meilleurs pas de danse!"
     }
   },
   {
     q: {
       en: "Will there be food?",
-      fr: "Y aura-t-il de la nourriture?"
+      fr: "Y aura-t'il quelque chose à manger?"
     },
     a: {
       en: "There will!",
-      fr: "Il y aura! Pizzas et buffet, fromage et cornichons."
+      fr: "Oui, il y aura un buffet."
     }
   }
 ];
@@ -204,13 +202,13 @@ const OTHER_QUESTIONS = [
   {
     q: {
       en: "Where can I tell you about what I can eat?",
-      fr: "Où puis-je vous parler de ce que je peux manger?"
+      fr: "Puis je vous dire ce que je peux manger?"
     },
     a: {
       en:
         "In May we will be offering a choice of menus, and we can discuss it then.",
       fr:
-        "En mai, nous proposerons un choix de menus et nous pourrons en discuter ensuite."
+        "Indiquez dans votre réponse vos besoins diététiques specifiques. Nous vous contacterons avant le mariage pour confirmer le menu."
     }
   },
   {
@@ -249,10 +247,19 @@ const OTHER_QUESTIONS = [
           <br />
           <ol type="1">
             <li>Non, s'il vous plait, juste vous</li>
-            <li>Vous pouvez donner un montant en cadeau à St Mungos</li>
             <li>
-              Nous allons partir en lune de miel, et ce sera plus cher que nous
-              réalisons.
+              Vous pouvez donner un montant en cadeau à St Mungos, une
+              association caritative qui aide les sans-abris.{" "}
+              <a
+                href="https://gofundme.com/anneso-amp-andy039s-wedding-campaign-for-st-mungo039s"
+                target="mungos"
+              >
+                Suivez ce lien pour plus d'informations.
+              </a>
+            </li>
+            <li>
+              Nous allons partir en lune de miel, ce qui nous coûtera sûrement
+              plus cher que prévu.
             </li>
           </ol>
         </>
@@ -288,6 +295,7 @@ const OTHER_QUESTIONS = [
             <li>The Wonderlab at the Science Museum (great for kids).</li>
             <li>Tate Modern</li>
           </ol>
+          <br />
           Day trips suggestions include: Oxford, Cambridge, Camber Sands and
           Rye, Brighton
           <br />2 days+ trips from London include: Bath and Stonehenge,
@@ -295,7 +303,38 @@ const OTHER_QUESTIONS = [
           Stratford-Upon-Avon
         </>
       ),
-      fr: "?"
+      fr: (
+        <>
+          Vous pouvez trouver des informations sur les lieux incontournables de
+          Londres sur le lien suivant{" "}
+          <a
+            href="https://www.thecrazytourist.com/25-best-things-to-do-in-london/"
+            target="attractions"
+          >
+            www.thecrazytourist.com/25-best-things-to-do-in-london
+          </a>
+          .<br />
+          Alternativement, vous pouvez aller vous ballader dans un de nos
+          endroits préferés de Londres:
+          <ol>
+            <li>Hampstead Heath</li>
+            <li>
+              The Curve garden, Cafe Andu (restaurant Ethiopien) et Cafe Oto à
+              Dalston.
+            </li>
+            <li>Les narchés de Shoreditch et Brick Lane</li>
+            <li>Le Wonderlab au Science Museum (super pour les enfants).</li>
+            <li>Le musée d'art moderne Tate Modern</li>
+          </ol>
+          <br />
+          Vous pouvez effectuer des excursions d'une journée à Oxford,
+          Cambridge, Camber Sands, Rye and Brighton.
+          <br />
+          Vous pouvez effectuer des excursions de deux journées ou plus à Bath
+          and Stonehenge, York, Canterbury, Stratford-Upon-Avon, dans le Lake
+          District, la région de Cornwall ou dans les Cotswolds.
+        </>
+      )
     }
   },
   {
@@ -304,8 +343,18 @@ const OTHER_QUESTIONS = [
       fr: "Y aura-t-il une navette pour aller et venir de l'hôtel?"
     },
     a: {
-      en: "?",
-      fr: "?"
+      en: (
+        <>
+          No, but you can find transport information on the{" "}
+          <Link to="/map">Locations</Link> page.
+        </>
+      ),
+      fr: (
+        <>
+          Non, mais vous pouvez trouver les informations concernant les
+          transports sur la page <Link to="/map">Locations</Link>.
+        </>
+      )
     }
   },
   {
@@ -324,7 +373,7 @@ const OTHER_QUESTIONS = [
       ),
       fr: (
         <>
-          S'il vous plaît écrivez-nous avec tout ce dont vous avez besoin{" "}
+          Contactez nous, s'il vous plait à{" "}
           <a href="mailto:hello@annesoetandy.com">hello@annesoetandy.com</a>
         </>
       )
@@ -343,7 +392,7 @@ export default {
   },
   before: {
     en: "Before the day",
-    fr: "Avant le jour",
+    fr: "Avant le jour J",
     items: BEFORE_QUESTIONS
   },
   ceremony: {
@@ -353,7 +402,7 @@ export default {
   },
   party: {
     en: "At the party",
-    fr: "À la fête",
+    fr: "A la soirée",
     items: PARTY_QUESTIONS
   },
   other: {

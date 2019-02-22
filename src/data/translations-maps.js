@@ -242,7 +242,7 @@ export default {
       fr: (
         <>
           <span>La Cérémonie:</span>
-          <span>La Mairie, Islington,</span>
+          <span>Islington Town Hall,</span>
           <span>N1 2UD</span>
         </>
       )
