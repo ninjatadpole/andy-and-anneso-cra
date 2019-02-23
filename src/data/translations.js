@@ -54,7 +54,7 @@ export const STRINGS = {
     },
     home: {
       en: "Home",
-      fr: "L'accueil"
+      fr: "Accueil"
     },
     maps: {
       en: "Locations",
@@ -62,7 +62,7 @@ export const STRINGS = {
     },
     timeline: {
       en: "Programme",
-      fr: "Le Programme"
+      fr: "Programme"
     },
     answers: {
       en: "Other Info",

@@ -5,11 +5,11 @@ import DropCap from "../components/drop-cap";
 export default {
   title: {
     en: <DropCap>Programme</DropCap>,
-    fr: <DropCap>Le Programme</DropCap>
+    fr: <DropCap>Programme</DropCap>
   },
   metaTitle: {
     en: "Programme",
-    fr: "Le Programme"
+    fr: "Programme"
   },
   ceremony: {
     title: {
