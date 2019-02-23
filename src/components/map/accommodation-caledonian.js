@@ -51,7 +51,11 @@ function AccommodationCaledonianMap(props) {
     }
   ];
 
-  return <BaseMap {...props} markers={markers} />;
+  return (
+    <BaseMap {...props} markers={markers}>
+      <div className="squirrel" />
+    </BaseMap>
+  );
 }
 
 export default AccommodationCaledonianMap;

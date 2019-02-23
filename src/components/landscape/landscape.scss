@@ -90,8 +90,7 @@
 
   .home-copy.fr & {
     .mirror {
-      transform: scaleX(-1);
-      filter: FlipH;
+      @extend %flip;
     }
 
     .mountain {

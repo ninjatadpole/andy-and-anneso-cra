@@ -24,7 +24,11 @@ function VenuesMap(props) {
     }
   ];
 
-  return <BaseMap {...props} markers={markers} />;
+  return (
+    <BaseMap {...props} markers={markers}>
+      <div className="kingfisher" />
+    </BaseMap>
+  );
 }
 
 export default VenuesMap;

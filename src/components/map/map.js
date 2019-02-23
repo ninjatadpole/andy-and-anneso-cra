@@ -128,6 +128,7 @@ class BaseMap extends React.Component {
             </div>
           </InfoWindow>
         </Map>
+        {this.props.children}
       </div>
     );
   }
