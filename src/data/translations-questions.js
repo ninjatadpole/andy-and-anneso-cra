@@ -271,7 +271,7 @@ const OTHER_QUESTIONS = [
       en:
         "Are there any local places you’d recommend I visit while I’m in town?",
       fr:
-        "Y a-t-il des endroits que vous recommanderiez de visiter pendant que je suis à ville?"
+        "Y a-t-il des endroits que vous recommanderiez de visiter pendant que je suis en ville?"
     },
     a: {
       en: (
@@ -322,7 +322,7 @@ const OTHER_QUESTIONS = [
               The Curve garden, Cafe Andu (restaurant Ethiopien) et Cafe Oto à
               Dalston.
             </li>
-            <li>Les narchés de Shoreditch et Brick Lane</li>
+            <li>Les marchés de Shoreditch et Brick Lane</li>
             <li>Le Wonderlab au Science Museum (super pour les enfants).</li>
             <li>Le musée d'art moderne Tate Modern</li>
           </ol>
