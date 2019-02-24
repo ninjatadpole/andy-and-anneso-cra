@@ -9,10 +9,6 @@ import ScrollNav from "../scroll-nav";
 import "./page-answers.scss";
 
 function PageQuestions(props) {
-  const {
-    ctx: { translate }
-  } = props;
-
   return (
     <Page className="page-answers" title="questions.metaTitle">
       <Translation tag="h1" id="questions.title" />

@@ -19,13 +19,13 @@ export default {
   accommodationAirBnbDesc: {
     en: (
       <>
-        AirBnB properties are available at a range of prices and locations
-        across London.
+        AirBnB properties are available at a range of prices from £40 and
+        locations across London.
       </>
     ),
     fr: (
       <>
-        Airbnb porpose, sur tout Londres, des locations de chambres, studios,
+        AirBnB porpose, sur tout Londres, des locations de chambres, studios,
         appartments et maisons chez l'habitant à louer a partir de 40£ par nuit
       </>
     )

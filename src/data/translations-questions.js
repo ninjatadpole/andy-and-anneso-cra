@@ -116,7 +116,8 @@ const CEREMONY_QUESTIONS = [
     },
     a: {
       en: "Of course! Just let us when you respond to the invite.",
-      fr: "Bien sûr! Faites le nous savoir quand nous repondrez à l'invitation."
+      fr:
+        "Bien sûr! Faites le nous savoir quand vous nous répondrez à l'invitation."
     }
   },
   {
@@ -128,7 +129,7 @@ const CEREMONY_QUESTIONS = [
       en:
         "No, please wear whatever you want. Feel free to bring funky props for the party!",
       fr:
-        "Non, portez ce que vous voulez. N'hésitez pas à amener des accesoires de fête pour la soirée!"
+        "Non, portez ce que vous voulez. N'hésitez pas à amener des accessoires de fête pour la soirée!"
     }
   },
   {
