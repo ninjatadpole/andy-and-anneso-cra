@@ -4,6 +4,8 @@ import classnames from "classnames";
 
 import { WithCtx } from "../../utils/context";
 
+import Footer from "../footer";
+
 import "./page.scss";
 
 function Page(props) {
@@ -18,6 +20,7 @@ function Page(props) {
     <DocumentTitle title={translate(title)}>
       <section className={classnames("page", className)}>
         <article>{children}</article>
+        <Footer />
       </section>
     </DocumentTitle>
   );

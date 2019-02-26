@@ -8,6 +8,10 @@
   overflow-x: hidden;
   overflow-y: auto;
   z-index: 1;
+
+  footer {
+    display: none;
+  }
 }
 
 .page:not(.page-home) {
@@ -17,7 +21,7 @@
     display: flex;
     flex-wrap: wrap;
     line-height: 1.5;
-    padding: 40px 3.5%;
+    padding: 40px 3.5% 0;
   }
 
   h1 {
@@ -49,5 +53,9 @@
 
   .section {
     margin-bottom: 6rem;
+  }
+
+  footer {
+    display: block;
   }
 }
