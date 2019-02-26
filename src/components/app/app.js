@@ -8,9 +8,9 @@ import { ContextProvider } from "../../utils/context";
 import LanguageSwitcher from "../language-switcher";
 import Navigation from "../navigation";
 import PageHome from "../page-home";
-import PageMap from "../page-map";
-import PageQuestions from "../page-answers";
-import PageTimeline from "../page-timeline";
+import PageLocation from "../page-location";
+import PageQuestions from "../page-info";
+import PageTimeline from "../page-programme";
 
 import { translate } from "../../data/translations";
 import { getStorageValue, setStorageValue } from "../../data/local-storage";
@@ -84,9 +84,9 @@ class App extends Component {
 
             <Switch>
               <Route exact path="/" component={PageHome} />
-              <Route path="/map" component={PageMap} />
-              <Route path="/schedule" component={PageTimeline} />
-              <Route path="/answers" component={PageQuestions} />
+              <Route path="/locations" component={PageLocation} />
+              <Route path="/programme" component={PageTimeline} />
+              <Route path="/info" component={PageQuestions} />
               <Route component={PageHome} />
             </Switch>
           </div>

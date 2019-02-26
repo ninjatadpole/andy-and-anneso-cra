@@ -6,54 +6,54 @@ import QuestionSection from "../question-section";
 import Translation from "../translation";
 import ScrollNav from "../scroll-nav";
 
-import "./page-answers.scss";
+import "./page-info.scss";
 
 function PageQuestions(props) {
   return (
-    <Page className="page-answers" title="questions.metaTitle">
-      <Translation tag="h1" id="questions.title" />
+    <Page className="page-info" title="info.metaTitle">
+      <Translation tag="h1" id="info.title" />
 
       <ScrollNav
         items={[
           {
-            link: "#questions-before",
-            textId: "questions.before"
+            link: "#info-before",
+            textId: "info.before"
           },
           {
-            link: "#questions-ceremony",
-            textId: "questions.ceremony"
+            link: "#info-ceremony",
+            textId: "info.ceremony"
           },
-          { link: "#questions-party", textId: "questions.party" },
-          { link: "#questions-other", textId: "questions.other" }
+          { link: "#info-party", textId: "info.party" },
+          { link: "#info-other", textId: "info.other" }
         ]}
       />
 
       <div className="content">
         <QuestionSection
           className="section"
-          id="questions-before"
-          dictionary="questions.before"
+          id="info-before"
+          dictionary="info.before"
           count="3"
         />
 
         <QuestionSection
           className="section"
-          id="questions-ceremony"
-          dictionary="questions.ceremony"
+          id="info-ceremony"
+          dictionary="info.ceremony"
           count="6"
         />
 
         <QuestionSection
           className="section"
-          id="questions-party"
-          dictionary="questions.party"
+          id="info-party"
+          dictionary="info.party"
           count="4"
         />
 
         <QuestionSection
           className="section"
-          id="questions-other"
-          dictionary="questions.other"
+          id="info-other"
+          dictionary="info.other"
           count="5"
         />
       </div>

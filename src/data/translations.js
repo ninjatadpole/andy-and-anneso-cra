@@ -1,7 +1,7 @@
 import homeTranslations from "./translations-home";
-import mapTranslations from "./translations-maps";
-import questionTranslations from "./translations-questions";
-import scheduleTranslations from "./translations-schedule";
+import locationTranslations from "./translations-locations";
+import infoTranslations from "./translations-info";
+import programmeTranslations from "./translations-programme";
 
 export function translate(key, language) {
   const result = searchObj(key, STRINGS);
@@ -46,7 +46,7 @@ export const STRINGS = {
     }
   },
   home: homeTranslations,
-  map: mapTranslations,
+  location: locationTranslations,
   navigation: {
     menu: {
       en: "Menu",
@@ -56,7 +56,7 @@ export const STRINGS = {
       en: "Home",
       fr: "Accueil"
     },
-    maps: {
+    locations: {
       en: "Locations",
       fr: "Locations"
     },
@@ -64,13 +64,13 @@ export const STRINGS = {
       en: "Programme",
       fr: "Programme"
     },
-    answers: {
+    info: {
       en: "Other Info",
       fr: "Autres Infos"
     }
   },
-  questions: questionTranslations,
-  schedule: scheduleTranslations,
+  info: infoTranslations,
+  programme: programmeTranslations,
   scrollNav: {
     close: {
       en: "Close",

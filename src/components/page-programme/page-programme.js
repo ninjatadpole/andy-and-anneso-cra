@@ -5,33 +5,33 @@ import ScrollNav from "../scroll-nav";
 import Timeline from "../timeline";
 import Translation from "../translation";
 
-import "./page-timeline.scss";
+import "./page-programme.scss";
 
 function PageTimeline(props) {
   return (
-    <Page className="page-timeline" title="schedule.metaTitle">
-      <Translation tag="h1" id="schedule.title" />
+    <Page className="page-programme" title="programme.metaTitle">
+      <Translation tag="h1" id="programme.title" />
 
       <ScrollNav
         items={[
           {
             link: "#timeline-ceremony",
-            textId: "schedule.ceremony.title"
+            textId: "programme.ceremony.title"
           },
           {
             link: "#timeline-party",
-            textId: "schedule.party.title"
+            textId: "programme.party.title"
           }
         ]}
       />
 
       <div className="content">
         <div className="section" id="timeline-ceremony">
-          <Translation tag="h2" id="schedule.ceremony.title" />
+          <Translation tag="h2" id="programme.ceremony.title" />
           <Timeline section="ceremony" />
         </div>
         <div className="section" id="timeline-party">
-          <Translation tag="h2" id="schedule.party.title" />
+          <Translation tag="h2" id="programme.party.title" />
           <Timeline section="party" />
         </div>
       </div>

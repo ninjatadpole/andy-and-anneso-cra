@@ -52,12 +52,12 @@ const BEFORE_QUESTIONS = [
     a: {
       en: (
         <>
-          We can! <Link to="/map">Check out the maps here</Link>
+          We can! <Link to="/locations">Check out the maps here</Link>
         </>
       ),
       fr: (
         <>
-          Nous pouvons! <Link to="/map">Découvrez les cartes ici</Link>
+          Nous pouvons! <Link to="/locations">Découvrez les cartes ici</Link>
         </>
       )
     }
@@ -347,13 +347,13 @@ const OTHER_QUESTIONS = [
       en: (
         <>
           No, but you can find transport information on the{" "}
-          <Link to="/map">Locations</Link> page.
+          <Link to="/locations">Locations</Link> page.
         </>
       ),
       fr: (
         <>
           Non, mais vous pouvez trouver les informations concernant les
-          transports sur la page <Link to="/map">Locations</Link>.
+          transports sur la page <Link to="/locations">Locations</Link>.
         </>
       )
     }

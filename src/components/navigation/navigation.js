@@ -36,14 +36,14 @@ class Navigation extends React.Component {
           <NavLink to="/" exact onClick={this.closeMenu}>
             <Translation id="navigation.home" />
           </NavLink>
-          <NavLink to="/map" onClick={this.closeMenu}>
-            <Translation id="navigation.maps" />
+          <NavLink to="/locations" onClick={this.closeMenu}>
+            <Translation id="navigation.locations" />
           </NavLink>
-          <NavLink to="/schedule" onClick={this.closeMenu}>
+          <NavLink to="/programme" onClick={this.closeMenu}>
             <Translation id="navigation.timeline" />
           </NavLink>
-          <NavLink to="/answers" onClick={this.closeMenu}>
-            <Translation id="navigation.answers" />
+          <NavLink to="/info" onClick={this.closeMenu}>
+            <Translation id="navigation.info" />
           </NavLink>
         </div>
       </nav>
