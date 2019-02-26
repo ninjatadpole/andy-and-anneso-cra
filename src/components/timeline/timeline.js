@@ -43,7 +43,6 @@ function Timeline(props) {
     return (
       <VerticalTimeline className="timeline" layout="1-column">
         <VerticalTimelineElement
-          className="ceremony-element"
           date="11:30"
           icon={<CeremonyIcon />}
           position="left"
@@ -51,53 +50,30 @@ function Timeline(props) {
           <Translation tag="h3" id="programme.ceremony.arrival.title" />
           <Translation tag="h4" id="programme.ceremony.arrival.subtitle" />
           <Translation tag="p" id="programme.ceremony.arrival.note" />
+          <div className="frog" />
         </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="ceremony-element"
-          date="12:00"
-          icon={<CeremonyIcon />}
-        >
+        <VerticalTimelineElement date="12:00" icon={<CeremonyIcon />}>
           <Translation tag="h3" id="programme.ceremony.ceremony.title" />
         </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="ceremony-element"
-          date="12:50"
-          icon={<CeremonyIcon />}
-        >
+        <VerticalTimelineElement date="12:50" icon={<CeremonyIcon />}>
           <Translation tag="h3" id="programme.ceremony.blessing.title" />
           <Translation tag="h4" id="programme.ceremony.blessing.subtitle" />
           <Translation tag="p" id="programme.ceremony.blessing.note" />
         </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="ceremony-element"
-          date="13:00"
-          icon={<CeremonyIcon />}
-        >
+        <VerticalTimelineElement date="13:00" icon={<CeremonyIcon />}>
           <Translation tag="h3" id="programme.ceremony.photos.title" />
           <Translation tag="h4" id="programme.ceremony.photos.subtitle" />
         </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="ceremony-element"
-          date="13:30"
-          icon={<CeremonyIcon />}
-        >
+        <VerticalTimelineElement date="13:30" icon={<CeremonyIcon />}>
           <Translation tag="h3" id="programme.ceremony.transport.title" />
           <Translation tag="p" id="programme.ceremony.transport.note" />
         </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="ceremony-element"
-          date="14:00"
-          icon={<CeremonyIcon />}
-        >
+        <VerticalTimelineElement date="14:00" icon={<CeremonyIcon />}>
           <Translation tag="h3" id="programme.ceremony.welcome.title" />
           <Translation tag="h4" id="programme.ceremony.welcome.subtitle" />
           <Translation tag="p" id="programme.ceremony.welcome.note" />
         </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="ceremony-element"
-          date="15:00"
-          icon={<CeremonyIcon />}
-        >
+        <VerticalTimelineElement date="15:00" icon={<CeremonyIcon />}>
           <Translation tag="h3" id="programme.ceremony.lunch.title" />
           <Translation tag="p" id="programme.ceremony.lunch.note" />
         </VerticalTimelineElement>
@@ -106,29 +82,18 @@ function Timeline(props) {
   } else if (section === "party") {
     return (
       <VerticalTimeline className="timeline" layout="1-column">
-        <VerticalTimelineElement
-          className="party-element"
-          date="19:00"
-          icon={<PartyIcon />}
-        >
+        <VerticalTimelineElement date="19:00" icon={<PartyIcon />}>
           <Translation tag="h3" id="programme.party.party.title" />
           <Translation tag="h4" id="programme.party.party.subtitle" />
           <Translation tag="p" id="programme.party.party.note" />
         </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="party-element"
-          date="21:00"
-          icon={<PartyIcon />}
-        >
+        <VerticalTimelineElement date="21:00" icon={<PartyIcon />}>
           <Translation tag="h3" id="programme.party.buffet.title" />
         </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="party-element"
-          date="02:00"
-          icon={<PartyIcon />}
-        >
+        <VerticalTimelineElement date="02:00" icon={<PartyIcon />}>
           <Translation tag="h3" id="programme.party.carriages.title" />
           <Translation tag="h4" id="programme.party.carriages.subtitle" />
+          <div className="bat" />
         </VerticalTimelineElement>
       </VerticalTimeline>
     );

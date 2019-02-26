@@ -1,9 +1,31 @@
 @import "../../styles/classes";
 @import "../../styles/responsive.scss";
 @import "../../styles/colours";
+@import "../../styles/mixins";
 
 .timeline {
   @extend .max-width;
+
+  .frog {
+    @include image-ratio("../../static/images/frog.png", 89%);
+
+    bottom: -11px;
+    left: 19px;
+    position: absolute;
+    transition: all 330ms ease-in-out;
+    width: 40px;
+  }
+
+  .bat {
+    @include image-ratio("../../static/images/bat.png", 77%);
+    @extend %flip;
+
+    left: 190px;
+    position: absolute;
+    top: -24px;
+    transition: all 330ms ease-in-out;
+    width: 40px;
+  }
 }
 
 .vertical-timeline::before {
@@ -12,7 +34,7 @@
 }
 
 .vertical-timeline-element-content {
-  background-color: $pale-white;
+  background-color: transparent;
   box-shadow: 0 3px 0 transparentize($white, 0.2);
   padding-left: 86px;
   padding-top: 0;
@@ -77,6 +99,7 @@
 }
 
 .vertical-timeline-element-icon {
+  background: $pale-white;
   box-shadow: 0 0 0 4px mix($white, #fff),
     0 0 2px 4px transparentize($black, 0.8);
 
